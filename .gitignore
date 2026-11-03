@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+
+# Build and test output
+dist/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+backend/src/generated/prisma/
+__pycache__/
+.venv/
+venv/
+.pytest_cache/
+.cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+ai-service/.model-cache/
+*.py[cod]
+htmlcov/
+coverage.xml
+playwright-report/
+test-results/
+
+# Private credentials and browser/session artifacts (templates remain publishable)
+*credentials*.json
+*service-account*.json
+*service_account*.json
+*-private-key.json
+!*.example.json
+.aws/
+.config/gcloud/
+chrome-user-data/
+browser-profile/
+*.har
+
+# Local database exports; retain the reviewed migration SQL
+backups/
+db-backups/
+*.dump
+*.backup
+*.sql
+!backend/prisma/**/migration.sql
+*.sql.gz
+*.sql.bz2
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+
+# Editors and operating systems
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Hosting and local tooling
+.netlify/

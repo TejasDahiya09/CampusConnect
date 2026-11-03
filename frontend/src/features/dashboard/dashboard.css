@@ -1,0 +1,416 @@
+.cc-dashboard {
+  max-width: 86rem;
+  display: grid;
+  gap: 1.1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+.cc-dashboard :is(a, button, summary):focus-visible {
+  outline: 3px solid var(--cc-focus);
+  outline-offset: 3px;
+}
+.cc-dashboard :is(h2, h3, p) {
+  margin: 0;
+}
+.cc-dashboard svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+.cc-dashboard .cc-button {
+  min-height: 44px;
+}
+.cc-db-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+.cc-db-section-heading h2 {
+  font-family: 'Manrope Variable', Manrope, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+.cc-db-section-heading p:not(.cc-eyebrow) {
+  color: var(--cc-muted);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  margin-top: 0.3rem;
+}
+.cc-db-section-heading > svg {
+  color: var(--cc-primary);
+}
+.cc-db-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.cc-db-metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+.cc-db-metric:hover {
+  box-shadow: var(--cc-shadow-sm);
+}
+.cc-db-metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2rem;
+}
+.cc-db-metric-header h3 {
+  font-size: 0.85rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.cc-db-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 0.6rem;
+  background: var(--cc-primary-soft);
+  color: var(--cc-primary);
+}
+.cc-db-value {
+  font-family: 'Manrope Variable', Manrope, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-top: 0.65rem;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.cc-db-metric-label {
+  font-size: 0.8rem;
+  color: var(--cc-text-soft);
+  margin-top: 0.25rem;
+}
+.cc-db-metric-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.55rem;
+  margin-top: auto;
+  color: var(--cc-muted);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+.cc-db-metric-footer svg {
+  width: 0.9rem;
+  color: var(--cc-primary);
+}
+.cc-db-work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.cc-db-panel {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--cc-border);
+  border-radius: 1rem;
+  background: var(--cc-panel);
+  box-shadow: var(--cc-shadow-sm);
+}
+.cc-db-attention {
+  display: flex;
+  flex-direction: column;
+}
+.cc-db-attention-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cc-db-attention-list li + li {
+  border-top: 1px solid var(--cc-border);
+}
+.cc-db-attention-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.2rem;
+  min-height: 3.75rem;
+  border-radius: 0.5rem;
+}
+.cc-db-attention-link > div {
+  flex: 1;
+  min-width: 0;
+}
+.cc-db-attention-title {
+  font-size: 0.85rem;
+  color: var(--cc-text);
+}
+.cc-db-attention-title strong {
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.cc-db-attention-link p {
+  font-size: 0.76rem;
+  color: var(--cc-muted);
+  line-height: 1.6;
+  margin-top: 0.3rem;
+}
+.cc-db-attention-link > svg {
+  width: 0.95rem;
+  color: var(--cc-primary);
+}
+.cc-db-quick-actions {
+  container-type: inline-size;
+}
+.cc-db-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+.cc-db-action {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.65rem;
+  border: 1px solid var(--cc-border);
+  border-radius: 0.7rem;
+  background: var(--cc-panel-muted);
+}
+.cc-db-action > svg {
+  margin-top: 0.1rem;
+  color: var(--cc-primary);
+}
+.cc-db-action > div {
+  min-width: 0;
+}
+.cc-db-action strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+.cc-db-action:hover,
+.cc-db-attention-link:hover {
+  background: var(--cc-hover);
+}
+.cc-db-action,
+.cc-db-attention-link {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+  text-decoration: none;
+}
+.cc-db-caught-up {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 0.3rem 0 0.2rem;
+}
+.cc-db-caught-up h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem;
+}
+.cc-db-caught-up p {
+  max-width: 42ch;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--cc-muted);
+}
+.cc-db-definitions {
+  margin-top: 0.25rem;
+}
+.cc-db-definitions summary {
+  min-height: 44px;
+  padding-block: 0.75rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--cc-muted);
+  cursor: pointer;
+  width: fit-content;
+  max-width: 100%;
+}
+.cc-db-definitions dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1.5rem;
+  padding: 1rem;
+  margin: 0.15rem 0 0;
+  border: 1px solid var(--cc-border);
+  border-radius: 0.75rem;
+  background: var(--cc-panel);
+}
+.cc-db-definitions dt {
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+.cc-db-definitions dd {
+  font-size: 0.76rem;
+  line-height: 1.7;
+  color: var(--cc-muted);
+  margin: 0.35rem 0 0;
+}
+.cc-db-welcome {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 3px solid var(--cc-primary);
+  padding: 0.9rem 1.1rem;
+  background: var(--cc-primary-soft);
+  border-radius: 0.2rem 0.7rem 0.7rem 0.2rem;
+}
+.cc-db-welcome h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.cc-db-welcome p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--cc-text-soft);
+  margin-top: 0.3rem;
+}
+.cc-db-state {
+  display: grid;
+  justify-items: start;
+  gap: 0.9rem;
+}
+.cc-db-state h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.cc-db-state p {
+  color: var(--cc-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.cc-db-loading {
+  display: grid;
+  gap: 1rem;
+}
+.cc-db-metric-skeleton {
+  height: 10rem;
+}
+.cc-db-panel-skeleton {
+  height: 12rem;
+}
+@container (min-width: 31.25rem) {
+  .cc-db-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1099px) {
+  .cc-db-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .cc-dashboard {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .cc-db-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .cc-db-metric {
+    padding: 0.9rem;
+  }
+  .cc-db-metric-header {
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .cc-db-metric-header h3 {
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
+  }
+  .cc-db-metric-header .cc-db-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .cc-db-value {
+    margin-top: 0.65rem;
+  }
+  .cc-db-panel {
+    padding: 1rem;
+  }
+  .cc-db-definitions dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cc-db-welcome {
+    align-items: start;
+  }
+}
+@media (max-width: 639px) {
+  .cc-dashboard > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.3rem 0.75rem;
+  }
+  .cc-dashboard > header > div:first-child {
+    display: contents;
+  }
+  .cc-dashboard > header .cc-eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+  .cc-dashboard > header h1 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+  }
+  .cc-dashboard > header .cc-page-description {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+  .cc-dashboard > header .cc-page-actions {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+  }
+  .cc-dashboard > header .cc-page-actions > * {
+    width: auto;
+  }
+}
+@media (max-width: 339px) {
+  .cc-db-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cc-db-metric {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.2rem 1rem;
+  }
+  .cc-db-metric-header {
+    grid-column: 1;
+  }
+  .cc-db-value {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    max-width: 9ch;
+    margin: 0;
+  }
+  .cc-db-metric-label {
+    grid-column: 1;
+  }
+  .cc-db-metric-footer {
+    grid-column: 1 / -1;
+    padding-top: 0.6rem;
+  }
+  .cc-db-actions {
+    gap: 0.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cc-dashboard :is(a, button) {
+    transition: none;
+  }
+}

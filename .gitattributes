@@ -1,0 +1,2 @@
+# Match .editorconfig and keep source/migration line endings consistent.
+* text=auto eol=lf

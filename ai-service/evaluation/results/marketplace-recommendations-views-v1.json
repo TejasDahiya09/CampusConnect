@@ -1,0 +1,108 @@
+{
+  "ai5WithoutViewsMetrics": {
+    "hit_rate_at_5": 1.0,
+    "mrr": 0.7833333333333333,
+    "precision_at_5": 0.2,
+    "recall_at_5": 1.0
+  },
+  "ai5bViewAwareMetrics": {
+    "hit_rate_at_5": 1.0,
+    "mrr": 0.8666666666666667,
+    "precision_at_5": 0.2,
+    "recall_at_5": 1.0
+  },
+  "completedAt": "2026-10-07T11:23:03.243503+00:00",
+  "dataset": {
+    "candidatesPerUser": 30,
+    "k": 5,
+    "scenarios": [
+      "meaningful_view_history",
+      "sparse",
+      "bookmark_plus_view",
+      "profile_plus_view",
+      "no_view_cold_start",
+      "conflicting_bookmark_view",
+      "old_vs_recent_view"
+    ],
+    "syntheticDeduplicatedRepeatedViews": 5,
+    "users": 30
+  },
+  "dedupWindowMinutes": 30,
+  "errorAnalysis": {
+    "viewAwareMissesAt5": 0
+  },
+  "finalDecision": "A - VIEW SIGNAL VALIDATED",
+  "historyLimit": 100,
+  "limitations": [
+    "synthetic ground truth",
+    "database latency not measured",
+    "ranking scores are not probabilities"
+  ],
+  "meanCategoryDiversity": 0.6666666666666666,
+  "performance": {
+    "coldEvaluationMs": 12537.540100000115,
+    "warmCachedRequestMs": 2.524200001062127
+  },
+  "privacyNotes": [
+    "synthetic data only",
+    "no user identity or raw Activity rows sent to the recommender"
+  ],
+  "recentOnlyBaselineMetrics": {
+    "hit_rate_at_5": 0.8333333333333334,
+    "mrr": 0.38055555555555554,
+    "precision_at_5": 0.16666666666666666,
+    "recall_at_5": 0.8333333333333334
+  },
+  "recommenderVersion": "marketplace-hybrid-v1",
+  "regressions": {
+    "noViewUsers": 0
+  },
+  "retentionStatus": "Uses existing Activity storage; no cleanup or retention policy is currently implemented.",
+  "runId": "63207a42-303d-4f12-ab8f-d185a287c88e",
+  "scoringConfiguration": {
+    "bookmark": 0.15,
+    "category": 0.25,
+    "content": 0.4,
+    "profile": 0.1,
+    "recency": 0.1
+  },
+  "seed": 20261025,
+  "sliceMetrics": {
+    "bookmark_plus_view": {
+      "hit_rate_at_5": 1.0,
+      "mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0
+    },
+    "meaningful_view_history": {
+      "hit_rate_at_5": 1.0,
+      "mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0
+    },
+    "no_view_cold_start": {
+      "hit_rate_at_5": 1.0,
+      "mrr": 0.2,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0
+    },
+    "profile_plus_view": {
+      "hit_rate_at_5": 1.0,
+      "mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0
+    },
+    "sparse": {
+      "hit_rate_at_5": 1.0,
+      "mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0
+    }
+  },
+  "startedAt": "2026-10-07T11:22:50.703221+00:00",
+  "status": "complete",
+  "viewDecay": {
+    "formula": "0.35 * exp(-ln(2) * ageDays / 14)",
+    "halfLifeDays": 14
+  }
+}

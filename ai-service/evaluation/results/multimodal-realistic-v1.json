@@ -1,0 +1,681 @@
+{
+  "benchmark": {
+    "case_count": 120,
+    "category_distribution": {
+      "Backpacks": 12,
+      "Books": 12,
+      "Calculators": 12,
+      "Chargers": 12,
+      "Earbuds cases": 12,
+      "Glasses": 12,
+      "Keys": 12,
+      "Umbrellas": 12,
+      "Wallets": 12,
+      "Water bottles": 12
+    },
+    "difficulty_distribution": {
+      "EASY": 40,
+      "HARD": 40,
+      "MODERATE": 40
+    },
+    "provenance": "Self-generated geometric object identities with deterministic phone-photo-like transformations; no student or production data.",
+    "seed": 20261023,
+    "transformation_configuration": [
+      "crop",
+      "resize",
+      "rotation",
+      "angle_affine",
+      "brightness",
+      "contrast",
+      "blur",
+      "noise",
+      "partial_occlusion",
+      "background_clutter",
+      "scale"
+    ],
+    "unique_image_payloads": 302,
+    "version": "lost-found-multimodal-realistic-v1"
+  },
+  "benchmark_v2_regression": {
+    "status": "pass"
+  },
+  "cache": {
+    "capacity": 256,
+    "cold_request_ms": 354.5653000001039,
+    "warm_request_ms": 4.102500000044529
+  },
+  "concurrency": [
+    {
+      "concurrency": 1,
+      "failure": 0,
+      "median_ms": 3.7099000001035165,
+      "p95_ms": 3.831500000160304,
+      "peak_rss_mib": 1694.6953125,
+      "rss_mib": 1150.89453125,
+      "success": 2,
+      "throughput_requests_per_second": 232.96718657903202,
+      "timeout": 0,
+      "total": 2
+    },
+    {
+      "concurrency": 2,
+      "failure": 0,
+      "median_ms": 4.853850000017701,
+      "p95_ms": 5.207400000472262,
+      "peak_rss_mib": 1694.6953125,
+      "rss_mib": 1150.96484375,
+      "success": 4,
+      "throughput_requests_per_second": 342.09378501372686,
+      "timeout": 0,
+      "total": 4
+    },
+    {
+      "concurrency": 5,
+      "failure": 0,
+      "median_ms": 10.448449999785225,
+      "p95_ms": 13.539099999434256,
+      "peak_rss_mib": 1694.6953125,
+      "rss_mib": 1152.44140625,
+      "success": 10,
+      "throughput_requests_per_second": 358.21109379534244,
+      "timeout": 0,
+      "total": 10
+    },
+    {
+      "concurrency": 10,
+      "failure": 0,
+      "median_ms": 18.772449999687524,
+      "p95_ms": 26.88600000055885,
+      "peak_rss_mib": 1694.6953125,
+      "rss_mib": 1153.51171875,
+      "success": 20,
+      "throughput_requests_per_second": 371.84051760435096,
+      "timeout": 0,
+      "total": 20
+    }
+  ],
+  "false_confidence": {
+    "count": 20,
+    "examples": [
+      {
+        "difficulty": "MODERATE",
+        "interaction": "image_ambiguous_text_useful",
+        "query_id": "q-001",
+        "visual_similarity": 0.9999999917974948,
+        "wrong_candidate_id": "a-hard-001"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "image_ambiguous_text_useful",
+        "query_id": "q-001",
+        "visual_similarity": 0.9999999917974948,
+        "wrong_candidate_id": "b-hard-001"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "image_ambiguous_text_useful",
+        "query_id": "q-001",
+        "visual_similarity": 0.9999999917974948,
+        "wrong_candidate_id": "c-hard-001"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "image_ambiguous_text_useful",
+        "query_id": "q-001",
+        "visual_similarity": 0.9999999917974948,
+        "wrong_candidate_id": "d-hard-001"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "conflicting_image",
+        "query_id": "q-003",
+        "visual_similarity": 0.8631491506818945,
+        "wrong_candidate_id": "a-hard-003"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "conflicting_image",
+        "query_id": "q-003",
+        "visual_similarity": 0.9404703227426543,
+        "wrong_candidate_id": "b-hard-003"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "conflicting_image",
+        "query_id": "q-003",
+        "visual_similarity": 0.8302385154401073,
+        "wrong_candidate_id": "c-hard-003"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "conflicting_image",
+        "query_id": "q-003",
+        "visual_similarity": 0.9327179590330135,
+        "wrong_candidate_id": "d-hard-003"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "conflicting_text",
+        "query_id": "q-004",
+        "visual_similarity": 0.9335859325994793,
+        "wrong_candidate_id": "a-hard-004"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "conflicting_text",
+        "query_id": "q-004",
+        "visual_similarity": 0.8540260563722449,
+        "wrong_candidate_id": "b-hard-004"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "conflicting_text",
+        "query_id": "q-004",
+        "visual_similarity": 0.9253284146753349,
+        "wrong_candidate_id": "c-hard-004"
+      },
+      {
+        "difficulty": "MODERATE",
+        "interaction": "conflicting_text",
+        "query_id": "q-004",
+        "visual_similarity": 0.8128238479123242,
+        "wrong_candidate_id": "d-hard-004"
+      },
+      {
+        "difficulty": "HARD",
+        "interaction": "near_duplicate",
+        "query_id": "q-005",
+        "visual_similarity": 0.9250152401395406,
+        "wrong_candidate_id": "a-hard-005"
+      },
+      {
+        "difficulty": "HARD",
+        "interaction": "near_duplicate",
+        "query_id": "q-005",
+        "visual_similarity": 0.9184984226499172,
+        "wrong_candidate_id": "b-hard-005"
+      },
+      {
+        "difficulty": "HARD",
+        "interaction": "near_duplicate",
+        "query_id": "q-005",
+        "visual_similarity": 0.911635058338391,
+        "wrong_candidate_id": "c-hard-005"
+      },
+      {
+        "difficulty": "HARD",
+        "interaction": "near_duplicate",
+        "query_id": "q-005",
+        "visual_similarity": 0.9344002656718453,
+        "wrong_candidate_id": "d-hard-005"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "text_ambiguous_image_useful",
+        "query_id": "q-006",
+        "visual_similarity": 0.9212302988847324,
+        "wrong_candidate_id": "a-hard-006"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "text_ambiguous_image_useful",
+        "query_id": "q-006",
+        "visual_similarity": 0.8821854371837854,
+        "wrong_candidate_id": "b-hard-006"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "text_ambiguous_image_useful",
+        "query_id": "q-006",
+        "visual_similarity": 0.9045605944219052,
+        "wrong_candidate_id": "c-hard-006"
+      },
+      {
+        "difficulty": "EASY",
+        "interaction": "text_ambiguous_image_useful",
+        "query_id": "q-006",
+        "visual_similarity": 0.9154989417845703,
+        "wrong_candidate_id": "d-hard-006"
+      }
+    ],
+    "threshold": 0.8
+  },
+  "mode": "full",
+  "model": {
+    "checkpoint": "laion2b_s34b_b79k",
+    "device": "cpu",
+    "image": "ViT-B-32",
+    "text": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "overall_metrics": {
+    "lf-multimodal-v1": {
+      "mrr": 1.0,
+      "precision_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0
+    },
+    "lf-semantic-v1": {
+      "mrr": 1.0,
+      "precision_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0
+    }
+  },
+  "provenance": {
+    "completed_at": "2026-10-07T10:39:43.922387Z",
+    "duration_ms": 71989.891,
+    "run_id": "2b88256e-77a3-49b9-979d-be9517d3d364",
+    "stages_completed": [
+      "benchmark_prepared",
+      "minilm_loaded",
+      "openclip_loaded",
+      "quality_evaluated",
+      "cache_measured",
+      "concurrency_measured",
+      "benchmark_v2_verified",
+      "readiness_decided",
+      "artifact_written"
+    ],
+    "started_at": "2026-10-07T10:38:31.932496Z"
+  },
+  "readiness_decision": "D - KEEP SEMANTIC-ONLY FOR NOW",
+  "regression_counts": {
+    "both_failed": 0,
+    "both_succeeded": 120,
+    "fixed": 0,
+    "introduced": 0
+  },
+  "resources": {
+    "baseline_rss_mib": 137.08203125,
+    "minilm_incremental_mib": 350.44921875,
+    "minilm_load_ms": 10164.741499999764,
+    "minilm_loaded_rss_mib": 487.53125,
+    "openclip_and_minilm_rss_mib": 1133.359375,
+    "openclip_incremental_mib": 645.828125,
+    "openclip_load_ms": 2532.035000000178,
+    "quality_cpu_time_over_wall_percent": 693.3151983485077,
+    "quality_evaluation_ms": 11133.103699999992
+  },
+  "s3_readiness": {
+    "required_permission": "s3:GetObject",
+    "resource": "configured private bucket Lost & Found media object prefix",
+    "status": "CODE READY / LIVE IAM UNVERIFIED"
+  },
+  "schema_version": "ai-4b-realistic-result-v1",
+  "slice_metrics": {
+    "multimodal": {
+      "Backpacks": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Books": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Calculators": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Chargers": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "EASY": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Earbuds cases": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Glasses": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "HARD": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Keys": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "MODERATE": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Umbrellas": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Wallets": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Water bottles": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "both_helpful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "both_images_present": {
+        "count": 84,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "conflicting_image": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "conflicting_text": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "image_ambiguous_text_useful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "missing_image_fallback": {
+        "count": 36,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "near_duplicate": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "same_category_hard_negative": {
+        "count": 120,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "text_ambiguous_image_useful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      }
+    },
+    "semantic": {
+      "Backpacks": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Books": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Calculators": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Chargers": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "EASY": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Earbuds cases": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Glasses": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "HARD": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Keys": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "MODERATE": {
+        "count": 40,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Umbrellas": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Wallets": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "Water bottles": {
+        "count": 12,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "both_helpful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "both_images_present": {
+        "count": 84,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "conflicting_image": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "conflicting_text": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "image_ambiguous_text_useful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "missing_image_fallback": {
+        "count": 36,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "near_duplicate": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "same_category_hard_negative": {
+        "count": 120,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "text_ambiguous_image_useful": {
+        "count": 20,
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      }
+    }
+  },
+  "status": "complete",
+  "weights": {
+    "fallback": {
+      "category": 0.2,
+      "location": 0.15,
+      "text": 0.55,
+      "time": 0.1
+    },
+    "multimodal": {
+      "category": 0.15,
+      "image": 0.25,
+      "location": 0.1,
+      "text": 0.4,
+      "time": 0.1
+    }
+  }
+}

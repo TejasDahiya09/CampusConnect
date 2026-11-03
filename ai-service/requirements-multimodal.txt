@@ -1,0 +1,3 @@
+-r requirements.txt
+# Experimental only. Production semantic deployments do not install this file.
+open_clip_torch==3.3.0

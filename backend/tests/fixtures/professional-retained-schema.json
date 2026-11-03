@@ -1,0 +1,6534 @@
+{
+  "publicObjects": [
+    {
+      "oid": "27990",
+      "kind": "type",
+      "name": "citext",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "27991",
+      "args": "cstring",
+      "kind": "function",
+      "name": "citextin",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "textin",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27992",
+      "args": "citext",
+      "kind": "function",
+      "name": "citextout",
+      "binary": null,
+      "result": "cstring",
+      "schema": "public",
+      "source": "textout",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27993",
+      "args": "internal",
+      "kind": "function",
+      "name": "citextrecv",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "textrecv",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27994",
+      "args": "citext",
+      "kind": "function",
+      "name": "citextsend",
+      "binary": null,
+      "result": "bytea",
+      "schema": "public",
+      "source": "textsend",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27995",
+      "kind": "type",
+      "name": "_citext",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "27996",
+      "args": "character",
+      "kind": "function",
+      "name": "citext",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "rtrim1",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27997",
+      "args": "boolean",
+      "kind": "function",
+      "name": "citext",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "booltext",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "27998",
+      "args": "inet",
+      "kind": "function",
+      "name": "citext",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "network_show",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28007",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_eq",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_eq",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28008",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_ne",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_ne",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28009",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_lt",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_lt",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28010",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_le",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_le",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28011",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_gt",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_gt",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28012",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_ge",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_ge",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28013",
+      "kind": "operator",
+      "name": "<>",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28014",
+      "kind": "operator",
+      "name": "=",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28015",
+      "kind": "operator",
+      "name": ">",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28016",
+      "kind": "operator",
+      "name": ">=",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28017",
+      "kind": "operator",
+      "name": "<",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28018",
+      "kind": "operator",
+      "name": "<=",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28019",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_cmp",
+      "binary": "$libdir/citext",
+      "result": "integer",
+      "schema": "public",
+      "source": "citext_cmp",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28020",
+      "args": "citext",
+      "kind": "function",
+      "name": "citext_hash",
+      "binary": "$libdir/citext",
+      "result": "integer",
+      "schema": "public",
+      "source": "citext_hash",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28021",
+      "kind": "operator_family",
+      "name": "citext_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28022",
+      "kind": "operator_class",
+      "name": "citext_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28029",
+      "kind": "operator_family",
+      "name": "citext_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28030",
+      "kind": "operator_class",
+      "name": "citext_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28033",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_smaller",
+      "binary": "$libdir/citext",
+      "result": "citext",
+      "schema": "public",
+      "source": "citext_smaller",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28034",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_larger",
+      "binary": "$libdir/citext",
+      "result": "citext",
+      "schema": "public",
+      "source": "citext_larger",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28035",
+      "args": "citext",
+      "kind": "function",
+      "name": "min",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "aggregate_dummy",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28036",
+      "args": "citext",
+      "kind": "function",
+      "name": "max",
+      "binary": null,
+      "result": "citext",
+      "schema": "public",
+      "source": "aggregate_dummy",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28037",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "texticlike",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticlike",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28038",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "texticnlike",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticnlike",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28039",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "texticregexeq",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticregexeq",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28040",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "texticregexne",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticregexne",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28041",
+      "kind": "operator",
+      "name": "!~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28042",
+      "kind": "operator",
+      "name": "~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28043",
+      "kind": "operator",
+      "name": "!~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28044",
+      "kind": "operator",
+      "name": "~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28045",
+      "kind": "operator",
+      "name": "!~~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28046",
+      "kind": "operator",
+      "name": "~~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28047",
+      "kind": "operator",
+      "name": "!~~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28048",
+      "kind": "operator",
+      "name": "~~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28049",
+      "args": "citext, text",
+      "kind": "function",
+      "name": "texticlike",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticlike",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28050",
+      "args": "citext, text",
+      "kind": "function",
+      "name": "texticnlike",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticnlike",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28051",
+      "args": "citext, text",
+      "kind": "function",
+      "name": "texticregexeq",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticregexeq",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28052",
+      "args": "citext, text",
+      "kind": "function",
+      "name": "texticregexne",
+      "binary": null,
+      "result": "boolean",
+      "schema": "public",
+      "source": "texticregexne",
+      "language": "internal",
+      "extension": "citext"
+    },
+    {
+      "oid": "28053",
+      "kind": "operator",
+      "name": "!~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28054",
+      "kind": "operator",
+      "name": "~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28055",
+      "kind": "operator",
+      "name": "!~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28056",
+      "kind": "operator",
+      "name": "~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28057",
+      "kind": "operator",
+      "name": "!~~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28058",
+      "kind": "operator",
+      "name": "~~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28059",
+      "kind": "operator",
+      "name": "!~~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28060",
+      "kind": "operator",
+      "name": "~~*",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28061",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "regexp_match",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_match( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28062",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "regexp_match",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_match( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28063",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "regexp_matches",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_matches( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28064",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "regexp_matches",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_matches( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28065",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "regexp_replace",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, $2::pg_catalog.text, $3, 'i');\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28066",
+      "args": "citext, citext, text, text",
+      "kind": "function",
+      "name": "regexp_replace",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, $2::pg_catalog.text, $3, CASE WHEN pg_catalog.strpos($4, 'c') = 0 THEN  $4 || 'i' ELSE $4 END);\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28067",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "regexp_split_to_array",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_split_to_array( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28068",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "regexp_split_to_array",
+      "binary": null,
+      "result": "text[]",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_split_to_array( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28069",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "regexp_split_to_table",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_split_to_table( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28070",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "regexp_split_to_table",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_split_to_table( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28071",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "strpos",
+      "binary": null,
+      "result": "integer",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.strpos( pg_catalog.lower( $1::pg_catalog.text ), pg_catalog.lower( $2::pg_catalog.text ) );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28072",
+      "args": "citext, citext, citext",
+      "kind": "function",
+      "name": "replace",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, pg_catalog.regexp_replace($2::pg_catalog.text, '([^a-zA-Z_0-9])', E'\\\\\\\\\\\\1', 'g'), $3::pg_catalog.text, 'gi' );\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28073",
+      "args": "citext, citext, integer",
+      "kind": "function",
+      "name": "split_part",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT (pg_catalog.regexp_split_to_array( $1::pg_catalog.text, pg_catalog.regexp_replace($2::pg_catalog.text, '([^a-zA-Z_0-9])', E'\\\\\\\\\\\\1', 'g'), 'i'))[$3];\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28074",
+      "args": "citext, citext, text",
+      "kind": "function",
+      "name": "translate",
+      "binary": null,
+      "result": "text",
+      "schema": "public",
+      "source": "\n    SELECT pg_catalog.translate( pg_catalog.translate( $1::pg_catalog.text, pg_catalog.lower($2::pg_catalog.text), $3), pg_catalog.upper($2::pg_catalog.text), $3);\n",
+      "language": "sql",
+      "extension": "citext"
+    },
+    {
+      "oid": "28075",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_pattern_lt",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_pattern_lt",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28076",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_pattern_le",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_pattern_le",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28077",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_pattern_gt",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_pattern_gt",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28078",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_pattern_ge",
+      "binary": "$libdir/citext",
+      "result": "boolean",
+      "schema": "public",
+      "source": "citext_pattern_ge",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28079",
+      "kind": "operator",
+      "name": "~>~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28080",
+      "kind": "operator",
+      "name": "~>=~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28081",
+      "kind": "operator",
+      "name": "~<~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28082",
+      "kind": "operator",
+      "name": "~<=~",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28083",
+      "args": "citext, citext",
+      "kind": "function",
+      "name": "citext_pattern_cmp",
+      "binary": "$libdir/citext",
+      "result": "integer",
+      "schema": "public",
+      "source": "citext_pattern_cmp",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28084",
+      "kind": "operator_family",
+      "name": "citext_pattern_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28085",
+      "kind": "operator_class",
+      "name": "citext_pattern_ops",
+      "schema": "public",
+      "extension": "citext"
+    },
+    {
+      "oid": "28092",
+      "args": "citext, bigint",
+      "kind": "function",
+      "name": "citext_hash_extended",
+      "binary": "$libdir/citext",
+      "result": "bigint",
+      "schema": "public",
+      "source": "citext_hash_extended",
+      "language": "c",
+      "extension": "citext"
+    },
+    {
+      "oid": "28094",
+      "kind": "type",
+      "name": "_user_role",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28095",
+      "kind": "type",
+      "name": "user_role",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28101",
+      "kind": "type",
+      "name": "_account_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28102",
+      "kind": "type",
+      "name": "account_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28109",
+      "kind": "type",
+      "name": "_listing_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28110",
+      "kind": "type",
+      "name": "listing_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28117",
+      "kind": "type",
+      "name": "_listing_condition",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28118",
+      "kind": "type",
+      "name": "listing_condition",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28129",
+      "kind": "type",
+      "name": "_lost_found_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28130",
+      "kind": "type",
+      "name": "lost_found_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28135",
+      "kind": "type",
+      "name": "_lost_found_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28136",
+      "kind": "type",
+      "name": "lost_found_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28149",
+      "kind": "type",
+      "name": "_claim_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28150",
+      "kind": "type",
+      "name": "claim_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28159",
+      "kind": "type",
+      "name": "_project_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28160",
+      "kind": "type",
+      "name": "project_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28169",
+      "kind": "type",
+      "name": "_service_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28170",
+      "kind": "type",
+      "name": "service_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28177",
+      "kind": "type",
+      "name": "_booking_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28178",
+      "kind": "type",
+      "name": "booking_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28189",
+      "kind": "type",
+      "name": "_conversation_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28190",
+      "kind": "type",
+      "name": "conversation_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28201",
+      "kind": "type",
+      "name": "_notification_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28202",
+      "kind": "type",
+      "name": "notification_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28219",
+      "kind": "type",
+      "name": "_report_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28220",
+      "kind": "type",
+      "name": "report_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28229",
+      "kind": "type",
+      "name": "_report_reason",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28230",
+      "kind": "type",
+      "name": "report_reason",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28247",
+      "kind": "type",
+      "name": "_ai_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28248",
+      "kind": "type",
+      "name": "ai_type",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28261",
+      "kind": "type",
+      "name": "_match_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28262",
+      "kind": "type",
+      "name": "match_status",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28271",
+      "kind": "relation",
+      "name": "users",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28272",
+      "kind": "type",
+      "name": "_users",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28273",
+      "kind": "type",
+      "name": "users",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28280",
+      "kind": "relation",
+      "name": "users_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28282",
+      "kind": "relation",
+      "name": "profiles",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28283",
+      "kind": "type",
+      "name": "_profiles",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28284",
+      "kind": "type",
+      "name": "profiles",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28296",
+      "kind": "relation",
+      "name": "profiles_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28298",
+      "kind": "relation",
+      "name": "marketplace",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28299",
+      "kind": "type",
+      "name": "_marketplace",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28300",
+      "kind": "type",
+      "name": "marketplace",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28314",
+      "kind": "relation",
+      "name": "marketplace_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28316",
+      "kind": "relation",
+      "name": "lost_found",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28317",
+      "kind": "type",
+      "name": "_lost_found",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28318",
+      "kind": "type",
+      "name": "lost_found",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28329",
+      "kind": "relation",
+      "name": "lost_found_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28331",
+      "kind": "relation",
+      "name": "teamup",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28332",
+      "kind": "type",
+      "name": "_teamup",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28333",
+      "kind": "type",
+      "name": "teamup",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28346",
+      "kind": "relation",
+      "name": "teamup_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28348",
+      "kind": "relation",
+      "name": "services",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28349",
+      "kind": "type",
+      "name": "_services",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28350",
+      "kind": "type",
+      "name": "services",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28366",
+      "kind": "relation",
+      "name": "services_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28368",
+      "kind": "relation",
+      "name": "messages",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28369",
+      "kind": "type",
+      "name": "_messages",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28370",
+      "kind": "type",
+      "name": "messages",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28377",
+      "kind": "relation",
+      "name": "messages_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28379",
+      "kind": "relation",
+      "name": "notifications",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28380",
+      "kind": "type",
+      "name": "_notifications",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28381",
+      "kind": "type",
+      "name": "notifications",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28387",
+      "kind": "relation",
+      "name": "notifications_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28389",
+      "kind": "relation",
+      "name": "reports",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28390",
+      "kind": "type",
+      "name": "_reports",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28391",
+      "kind": "type",
+      "name": "reports",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28398",
+      "kind": "relation",
+      "name": "reports_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28400",
+      "kind": "relation",
+      "name": "ai_data",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28401",
+      "kind": "type",
+      "name": "_ai_data",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28402",
+      "kind": "type",
+      "name": "ai_data",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28410",
+      "kind": "relation",
+      "name": "ai_data_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28412",
+      "kind": "relation",
+      "name": "activity_id_seq",
+      "schema": "public",
+      "subtype": "S",
+      "extension": null
+    },
+    {
+      "oid": "28413",
+      "kind": "relation",
+      "name": "activity",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28414",
+      "kind": "type",
+      "name": "_activity",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28415",
+      "kind": "type",
+      "name": "activity",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28421",
+      "kind": "relation",
+      "name": "activity_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28423",
+      "kind": "relation",
+      "name": "users_email_key",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28424",
+      "kind": "relation",
+      "name": "idx_users_last_seen",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28425",
+      "kind": "relation",
+      "name": "idx_users_role",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28426",
+      "kind": "relation",
+      "name": "idx_users_status",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28427",
+      "kind": "relation",
+      "name": "profiles_username_key",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28428",
+      "kind": "relation",
+      "name": "idx_profiles_department",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28429",
+      "kind": "relation",
+      "name": "idx_profiles_name",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28430",
+      "kind": "relation",
+      "name": "idx_profiles_year",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28431",
+      "kind": "relation",
+      "name": "idx_marketplace_category",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28432",
+      "kind": "relation",
+      "name": "idx_marketplace_condition",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28433",
+      "kind": "relation",
+      "name": "idx_marketplace_feed",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28434",
+      "kind": "relation",
+      "name": "idx_marketplace_location",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28435",
+      "kind": "relation",
+      "name": "idx_marketplace_price",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28436",
+      "kind": "relation",
+      "name": "idx_marketplace_seller",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28437",
+      "kind": "relation",
+      "name": "idx_lost_found_category",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28438",
+      "kind": "relation",
+      "name": "idx_lost_found_date",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28439",
+      "kind": "relation",
+      "name": "idx_lost_found_feed",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28440",
+      "kind": "relation",
+      "name": "idx_lost_found_location",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28441",
+      "kind": "relation",
+      "name": "idx_lost_found_reporter",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28442",
+      "kind": "relation",
+      "name": "idx_lost_found_type",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28443",
+      "kind": "relation",
+      "name": "idx_teamup_category",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28444",
+      "kind": "relation",
+      "name": "idx_teamup_deadline",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28445",
+      "kind": "relation",
+      "name": "idx_teamup_feed",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28446",
+      "kind": "relation",
+      "name": "idx_teamup_owner",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28447",
+      "kind": "relation",
+      "name": "idx_services_category",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28448",
+      "kind": "relation",
+      "name": "idx_services_feed",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28449",
+      "kind": "relation",
+      "name": "idx_services_price",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28450",
+      "kind": "relation",
+      "name": "idx_services_provider",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28451",
+      "kind": "relation",
+      "name": "idx_messages_context",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28452",
+      "kind": "relation",
+      "name": "idx_messages_direct_chat",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28453",
+      "kind": "relation",
+      "name": "idx_messages_receiver",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28454",
+      "kind": "relation",
+      "name": "idx_messages_sender",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28455",
+      "kind": "relation",
+      "name": "idx_messages_unread",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28456",
+      "kind": "relation",
+      "name": "idx_notifications_unread",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28457",
+      "kind": "relation",
+      "name": "idx_notifications_user",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28458",
+      "kind": "relation",
+      "name": "idx_reports_reporter",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28459",
+      "kind": "relation",
+      "name": "idx_reports_status",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28460",
+      "kind": "relation",
+      "name": "idx_reports_target",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28461",
+      "kind": "relation",
+      "name": "idx_ai_score",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28462",
+      "kind": "relation",
+      "name": "idx_ai_target",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28463",
+      "kind": "relation",
+      "name": "idx_ai_type",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28464",
+      "kind": "relation",
+      "name": "idx_ai_user",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28465",
+      "kind": "relation",
+      "name": "idx_activity_created",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28466",
+      "kind": "relation",
+      "name": "idx_activity_entity",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28467",
+      "kind": "relation",
+      "name": "idx_activity_event",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28468",
+      "kind": "relation",
+      "name": "idx_activity_user",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28530",
+      "kind": "relation",
+      "name": "conversations",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28531",
+      "kind": "type",
+      "name": "_conversations",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28532",
+      "kind": "type",
+      "name": "conversations",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28540",
+      "kind": "relation",
+      "name": "conversations_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28542",
+      "kind": "relation",
+      "name": "uq_conversations_identity",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28543",
+      "kind": "relation",
+      "name": "idx_conversations_participant_a",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28544",
+      "kind": "relation",
+      "name": "idx_conversations_participant_b",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28556",
+      "kind": "relation",
+      "name": "idx_messages_conversation",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28563",
+      "kind": "type",
+      "name": "_moderation_visibility",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28564",
+      "kind": "type",
+      "name": "moderation_visibility",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28574",
+      "kind": "relation",
+      "name": "idx_profiles_moderation_visibility",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28575",
+      "kind": "relation",
+      "name": "idx_marketplace_moderation_visibility",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28576",
+      "kind": "relation",
+      "name": "idx_lost_found_moderation_visibility",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28577",
+      "kind": "relation",
+      "name": "idx_teamup_moderation_visibility",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28578",
+      "kind": "relation",
+      "name": "idx_services_moderation_visibility",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28583",
+      "kind": "relation",
+      "name": "idx_marketplace_landing_featured",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28584",
+      "kind": "relation",
+      "name": "idx_lost_found_landing_featured",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28585",
+      "kind": "relation",
+      "name": "idx_teamup_landing_featured",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28586",
+      "kind": "relation",
+      "name": "idx_services_landing_featured",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    },
+    {
+      "oid": "28587",
+      "kind": "relation",
+      "name": "professional_profiles",
+      "schema": "public",
+      "subtype": "r",
+      "extension": null
+    },
+    {
+      "oid": "28588",
+      "kind": "type",
+      "name": "_professional_profiles",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28589",
+      "kind": "type",
+      "name": "professional_profiles",
+      "schema": "public",
+      "extension": null
+    },
+    {
+      "oid": "28597",
+      "kind": "relation",
+      "name": "professional_profiles_pkey",
+      "schema": "public",
+      "subtype": "i",
+      "extension": null
+    }
+  ],
+  "derivedToast": [
+    {
+      "owner": "activity",
+      "name": "pg_toast_28413",
+      "table_oid": "28419",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28413_index",
+      "index_oid": "28420"
+    },
+    {
+      "owner": "ai_data",
+      "name": "pg_toast_28400",
+      "table_oid": "28408",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28400_index",
+      "index_oid": "28409"
+    },
+    {
+      "owner": "lost_found",
+      "name": "pg_toast_28316",
+      "table_oid": "28327",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28316_index",
+      "index_oid": "28328"
+    },
+    {
+      "owner": "marketplace",
+      "name": "pg_toast_28298",
+      "table_oid": "28312",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28298_index",
+      "index_oid": "28313"
+    },
+    {
+      "owner": "messages",
+      "name": "pg_toast_28368",
+      "table_oid": "28375",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28368_index",
+      "index_oid": "28376"
+    },
+    {
+      "owner": "notifications",
+      "name": "pg_toast_28379",
+      "table_oid": "28385",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28379_index",
+      "index_oid": "28386"
+    },
+    {
+      "owner": "professional_profiles",
+      "name": "pg_toast_28587",
+      "table_oid": "28595",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28587_index",
+      "index_oid": "28596"
+    },
+    {
+      "owner": "profiles",
+      "name": "pg_toast_28282",
+      "table_oid": "28294",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28282_index",
+      "index_oid": "28295"
+    },
+    {
+      "owner": "reports",
+      "name": "pg_toast_28389",
+      "table_oid": "28396",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28389_index",
+      "index_oid": "28397"
+    },
+    {
+      "owner": "services",
+      "name": "pg_toast_28348",
+      "table_oid": "28364",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28348_index",
+      "index_oid": "28365"
+    },
+    {
+      "owner": "teamup",
+      "name": "pg_toast_28331",
+      "table_oid": "28344",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28331_index",
+      "index_oid": "28345"
+    },
+    {
+      "owner": "users",
+      "name": "pg_toast_28271",
+      "table_oid": "28278",
+      "row_type_oid": "0",
+      "index_name": "pg_toast_28271_index",
+      "index_oid": "28279"
+    }
+  ],
+  "schemas": ["information_schema", "pg_catalog", "pg_toast", "public"],
+  "extensions": [
+    {
+      "name": "citext",
+      "schema": "public",
+      "version": "1.6"
+    },
+    {
+      "name": "plpgsql",
+      "schema": "pg_catalog",
+      "version": "1.0"
+    }
+  ],
+  "metadata": {
+    "namespaces": [
+      {
+        "acl": "{pg_database_owner=UC/pg_database_owner,=U/pg_database_owner}",
+        "name": "public",
+        "owner": "pg_database_owner"
+      }
+    ],
+    "triggers": null,
+    "relations": [
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "activity",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "S",
+        "name": "activity_id_seq",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "activity_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "ai_data",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "ai_data_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "conversations",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "conversations_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_activity_created",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_activity_entity",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_activity_event",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_activity_user",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_ai_score",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_ai_target",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_ai_type",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_ai_user",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_conversations_participant_a",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_conversations_participant_b",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_category",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_date",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_feed",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_landing_featured",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_location",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_moderation_visibility",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_reporter",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_lost_found_type",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_category",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_condition",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_feed",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_landing_featured",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_location",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_moderation_visibility",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_price",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_marketplace_seller",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_context",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_conversation",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_direct_chat",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_receiver",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_sender",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_messages_unread",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_notifications_unread",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_notifications_user",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_profiles_department",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_profiles_moderation_visibility",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_profiles_name",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_profiles_year",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_reports_reporter",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_reports_status",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_reports_target",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_category",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_feed",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_landing_featured",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_moderation_visibility",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_price",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_services_provider",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_category",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_deadline",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_feed",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_landing_featured",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_moderation_visibility",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_teamup_owner",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_users_last_seen",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_users_role",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "idx_users_status",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "lost_found",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "lost_found_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "marketplace",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "marketplace_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "messages",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "messages_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "notifications",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "notifications_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": "{postgres=arwdDxtm/postgres}",
+        "rls": true,
+        "kind": "r",
+        "name": "professional_profiles",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "professional_profiles_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "profiles",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "profiles_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "profiles_username_key",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "reports",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "reports_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "services",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "services_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "teamup",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "teamup_pkey",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "uq_conversations_identity",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "r",
+        "name": "users",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "users_email_key",
+        "force": false,
+        "owner": "postgres"
+      },
+      {
+        "acl": null,
+        "rls": false,
+        "kind": "i",
+        "name": "users_pkey",
+        "force": false,
+        "owner": "postgres"
+      }
+    ],
+    "columns": [
+      {
+        "name": "id",
+        "type": "bigint",
+        "table": "activity",
+        "default": "nextval('activity_id_seq'::regclass)",
+        "required": true
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "activity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "event",
+        "type": "character varying(100)",
+        "table": "activity",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "entity_type",
+        "type": "character varying(50)",
+        "table": "activity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "entity_id",
+        "type": "uuid",
+        "table": "activity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "metadata",
+        "type": "jsonb",
+        "table": "activity",
+        "default": "'{}'::jsonb",
+        "required": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "activity",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "last_value",
+        "type": "bigint",
+        "table": "activity_id_seq",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "log_cnt",
+        "type": "bigint",
+        "table": "activity_id_seq",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "is_called",
+        "type": "boolean",
+        "table": "activity_id_seq",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "bigint",
+        "table": "activity_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "ai_data",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "ai_type",
+        "table": "ai_data",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "target_type",
+        "type": "character varying(40)",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "target_id",
+        "type": "uuid",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "input",
+        "type": "jsonb",
+        "table": "ai_data",
+        "default": "'{}'::jsonb",
+        "required": true
+      },
+      {
+        "name": "output",
+        "type": "jsonb",
+        "table": "ai_data",
+        "default": "'{}'::jsonb",
+        "required": true
+      },
+      {
+        "name": "score",
+        "type": "numeric(5,4)",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "model",
+        "type": "character varying(120)",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "model_version",
+        "type": "character varying(80)",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "tokens_used",
+        "type": "integer",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "latency_ms",
+        "type": "integer",
+        "table": "ai_data",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "character varying(30)",
+        "table": "ai_data",
+        "default": "'COMPLETED'::character varying",
+        "required": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "ai_data",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "ai_data_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "conversations",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "participant_a_id",
+        "type": "uuid",
+        "table": "conversations",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "participant_b_id",
+        "type": "uuid",
+        "table": "conversations",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "context_type",
+        "type": "conversation_type",
+        "table": "conversations",
+        "default": "'DIRECT'::conversation_type",
+        "required": true
+      },
+      {
+        "name": "context_id",
+        "type": "uuid",
+        "table": "conversations",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "context_key",
+        "type": "character varying(36)",
+        "table": "conversations",
+        "default": "''::character varying",
+        "required": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "conversations",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "conversations",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "conversations_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_activity_created",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "entity_type",
+        "type": "character varying(50)",
+        "table": "idx_activity_entity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "entity_id",
+        "type": "uuid",
+        "table": "idx_activity_entity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_activity_entity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "event",
+        "type": "character varying(100)",
+        "table": "idx_activity_event",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_activity_event",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "idx_activity_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_activity_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "ai_type",
+        "table": "idx_ai_score",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "score",
+        "type": "numeric(5,4)",
+        "table": "idx_ai_score",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "target_type",
+        "type": "character varying(40)",
+        "table": "idx_ai_target",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "target_id",
+        "type": "uuid",
+        "table": "idx_ai_target",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "ai_type",
+        "table": "idx_ai_type",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_ai_type",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "idx_ai_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_ai_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "participant_a_id",
+        "type": "uuid",
+        "table": "idx_conversations_participant_a",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_conversations_participant_a",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "participant_b_id",
+        "type": "uuid",
+        "table": "idx_conversations_participant_b",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_conversations_participant_b",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "idx_lost_found_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "idx_lost_found_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "incident_date",
+        "type": "date",
+        "table": "idx_lost_found_date",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "idx_lost_found_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_lost_found_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "idx_lost_found_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "idx_lost_found_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_lost_found_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "idx_lost_found_location",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "idx_lost_found_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "idx_lost_found_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_lost_found_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "reporter_id",
+        "type": "uuid",
+        "table": "idx_lost_found_reporter",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_lost_found_reporter",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "lost_found_type",
+        "table": "idx_lost_found_type",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "idx_lost_found_type",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_lost_found_type",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "idx_marketplace_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_marketplace_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "condition",
+        "type": "listing_condition",
+        "table": "idx_marketplace_condition",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_condition",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_marketplace_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "idx_marketplace_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_marketplace_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "idx_marketplace_location",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "idx_marketplace_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_marketplace_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "idx_marketplace_price",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "price",
+        "type": "numeric(12,2)",
+        "table": "idx_marketplace_price",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "seller_id",
+        "type": "uuid",
+        "table": "idx_marketplace_seller",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_marketplace_seller",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "context_type",
+        "type": "conversation_type",
+        "table": "idx_messages_context",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "context_id",
+        "type": "uuid",
+        "table": "idx_messages_context",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_context",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "conversation_id",
+        "type": "uuid",
+        "table": "idx_messages_conversation",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_conversation",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "idx_messages_conversation",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "sender_id",
+        "type": "uuid",
+        "table": "idx_messages_direct_chat",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "receiver_id",
+        "type": "uuid",
+        "table": "idx_messages_direct_chat",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_direct_chat",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "receiver_id",
+        "type": "uuid",
+        "table": "idx_messages_receiver",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_receiver",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "sender_id",
+        "type": "uuid",
+        "table": "idx_messages_sender",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_sender",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "receiver_id",
+        "type": "uuid",
+        "table": "idx_messages_unread",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_messages_unread",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "idx_notifications_unread",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_notifications_unread",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "idx_notifications_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_notifications_user",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "department",
+        "type": "character varying(120)",
+        "table": "idx_profiles_department",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "idx_profiles_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "full_name",
+        "type": "character varying(120)",
+        "table": "idx_profiles_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "full_name",
+        "type": "character varying(120)",
+        "table": "idx_profiles_name",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "academic_year",
+        "type": "smallint",
+        "table": "idx_profiles_year",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "reporter_id",
+        "type": "uuid",
+        "table": "idx_reports_reporter",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_reports_reporter",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "report_status",
+        "table": "idx_reports_status",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_reports_status",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "target_type",
+        "type": "character varying(30)",
+        "table": "idx_reports_target",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "target_id",
+        "type": "uuid",
+        "table": "idx_reports_target",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "idx_services_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "idx_services_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "idx_services_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_services_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "idx_services_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "idx_services_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_services_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "idx_services_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "idx_services_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_services_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "idx_services_price",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "price",
+        "type": "numeric(12,2)",
+        "table": "idx_services_price",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "provider_id",
+        "type": "uuid",
+        "table": "idx_services_provider",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_services_provider",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "idx_teamup_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "project_status",
+        "table": "idx_teamup_category",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "deadline",
+        "type": "date",
+        "table": "idx_teamup_deadline",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "project_status",
+        "table": "idx_teamup_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_teamup_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "idx_teamup_feed",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "project_status",
+        "table": "idx_teamup_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_teamup_landing_featured",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "idx_teamup_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "project_status",
+        "table": "idx_teamup_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_teamup_moderation_visibility",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "owner_id",
+        "type": "uuid",
+        "table": "idx_teamup_owner",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_teamup_owner",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "last_seen_at",
+        "type": "timestamp(6) with time zone",
+        "table": "idx_users_last_seen",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "role",
+        "type": "user_role",
+        "table": "idx_users_role",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "account_status",
+        "table": "idx_users_status",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "lost_found",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "reporter_id",
+        "type": "uuid",
+        "table": "lost_found",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "type",
+        "type": "lost_found_type",
+        "table": "lost_found",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "lost_found_status",
+        "table": "lost_found",
+        "default": "'OPEN'::lost_found_status",
+        "required": true
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "character varying(180)",
+        "table": "lost_found",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "table": "lost_found",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "incident_date",
+        "type": "date",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "images",
+        "type": "jsonb",
+        "table": "lost_found",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "bookmarks",
+        "type": "jsonb",
+        "table": "lost_found",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "claims",
+        "type": "jsonb",
+        "table": "lost_found",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "matches",
+        "type": "jsonb",
+        "table": "lost_found",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "resolved_at",
+        "type": "timestamp(6) with time zone",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "lost_found",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "lost_found",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "lost_found",
+        "default": "'VISIBLE'::moderation_visibility",
+        "required": true
+      },
+      {
+        "name": "moderation_reason",
+        "type": "character varying(500)",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "lost_found",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "featured_on_landing",
+        "type": "boolean",
+        "table": "lost_found",
+        "default": "false",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "lost_found_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "marketplace",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "seller_id",
+        "type": "uuid",
+        "table": "marketplace",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "character varying(180)",
+        "table": "marketplace",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "table": "marketplace",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "marketplace",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "price",
+        "type": "numeric(12,2)",
+        "table": "marketplace",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "currency",
+        "type": "character(3)",
+        "table": "marketplace",
+        "default": "'INR'::bpchar",
+        "required": true
+      },
+      {
+        "name": "condition",
+        "type": "listing_condition",
+        "table": "marketplace",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "listing_status",
+        "table": "marketplace",
+        "default": "'ACTIVE'::listing_status",
+        "required": true
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "marketplace",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "images",
+        "type": "jsonb",
+        "table": "marketplace",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "bookmarks",
+        "type": "jsonb",
+        "table": "marketplace",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "reviews",
+        "type": "jsonb",
+        "table": "marketplace",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "rating",
+        "type": "numeric(3,2)",
+        "table": "marketplace",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "rating_count",
+        "type": "integer",
+        "table": "marketplace",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "view_count",
+        "type": "integer",
+        "table": "marketplace",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "sold_at",
+        "type": "timestamp(6) with time zone",
+        "table": "marketplace",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "marketplace",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "marketplace",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "marketplace",
+        "default": "'VISIBLE'::moderation_visibility",
+        "required": true
+      },
+      {
+        "name": "moderation_reason",
+        "type": "character varying(500)",
+        "table": "marketplace",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "marketplace",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "featured_on_landing",
+        "type": "boolean",
+        "table": "marketplace",
+        "default": "false",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "marketplace_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "messages",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "sender_id",
+        "type": "uuid",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "receiver_id",
+        "type": "uuid",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "context_type",
+        "type": "conversation_type",
+        "table": "messages",
+        "default": "'DIRECT'::conversation_type",
+        "required": true
+      },
+      {
+        "name": "context_id",
+        "type": "uuid",
+        "table": "messages",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "attachments",
+        "type": "jsonb",
+        "table": "messages",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "read_at",
+        "type": "timestamp(6) with time zone",
+        "table": "messages",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "edited_at",
+        "type": "timestamp(6) with time zone",
+        "table": "messages",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "deleted_at",
+        "type": "timestamp(6) with time zone",
+        "table": "messages",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "messages",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "conversation_id",
+        "type": "uuid",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "encrypted_content",
+        "type": "bytea",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "encryption_iv",
+        "type": "bytea",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "encryption_tag",
+        "type": "bytea",
+        "table": "messages",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "encryption_version",
+        "type": "smallint",
+        "table": "messages",
+        "default": "1",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "messages_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "notifications",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "notifications",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "type",
+        "type": "notification_type",
+        "table": "notifications",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "character varying(180)",
+        "table": "notifications",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "message",
+        "type": "character varying(1000)",
+        "table": "notifications",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "data",
+        "type": "jsonb",
+        "table": "notifications",
+        "default": "'{}'::jsonb",
+        "required": true
+      },
+      {
+        "name": "read_at",
+        "type": "timestamp(6) with time zone",
+        "table": "notifications",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "notifications",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "notifications",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "notifications_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "professional_profiles",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "details",
+        "type": "jsonb",
+        "table": "professional_profiles",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "professional_profiles_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "profiles",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "full_name",
+        "type": "character varying(120)",
+        "table": "profiles",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "username",
+        "type": "citext",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "university",
+        "type": "character varying(160)",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "department",
+        "type": "character varying(120)",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "academic_year",
+        "type": "smallint",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "bio",
+        "type": "character varying(1000)",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "avatar",
+        "type": "jsonb",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "skills",
+        "type": "text[]",
+        "table": "profiles",
+        "default": "ARRAY[]::text[]",
+        "required": false
+      },
+      {
+        "name": "interests",
+        "type": "text[]",
+        "table": "profiles",
+        "default": "ARRAY[]::text[]",
+        "required": false
+      },
+      {
+        "name": "achievements",
+        "type": "jsonb",
+        "table": "profiles",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "portfolio",
+        "type": "jsonb",
+        "table": "profiles",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "rating",
+        "type": "numeric(3,2)",
+        "table": "profiles",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "rating_count",
+        "type": "integer",
+        "table": "profiles",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "profile_completion",
+        "type": "smallint",
+        "table": "profiles",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "profiles",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "profiles",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "skill_proficiencies",
+        "type": "jsonb",
+        "table": "profiles",
+        "default": "'{}'::jsonb",
+        "required": true
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "profiles",
+        "default": "'VISIBLE'::moderation_visibility",
+        "required": true
+      },
+      {
+        "name": "moderation_reason",
+        "type": "character varying(500)",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "profiles",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "table": "profiles_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "username",
+        "type": "citext",
+        "table": "profiles_username_key",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "reports",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "reporter_id",
+        "type": "uuid",
+        "table": "reports",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "target_type",
+        "type": "character varying(30)",
+        "table": "reports",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "target_id",
+        "type": "uuid",
+        "table": "reports",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "reason",
+        "type": "report_reason",
+        "table": "reports",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "table": "reports",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "report_status",
+        "table": "reports",
+        "default": "'OPEN'::report_status",
+        "required": true
+      },
+      {
+        "name": "reviewed_by",
+        "type": "uuid",
+        "table": "reports",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "resolution_note",
+        "type": "text",
+        "table": "reports",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "reviewed_at",
+        "type": "timestamp(6) with time zone",
+        "table": "reports",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "reports",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "reports",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "reports_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "services",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "provider_id",
+        "type": "uuid",
+        "table": "services",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "character varying(180)",
+        "table": "services",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "table": "services",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "services",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "skills",
+        "type": "text[]",
+        "table": "services",
+        "default": "ARRAY[]::text[]",
+        "required": false
+      },
+      {
+        "name": "price",
+        "type": "numeric(12,2)",
+        "table": "services",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "currency",
+        "type": "character(3)",
+        "table": "services",
+        "default": "'INR'::bpchar",
+        "required": true
+      },
+      {
+        "name": "location",
+        "type": "character varying(180)",
+        "table": "services",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "images",
+        "type": "jsonb",
+        "table": "services",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "portfolio",
+        "type": "jsonb",
+        "table": "services",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "bookmarks",
+        "type": "jsonb",
+        "table": "services",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "bookings",
+        "type": "jsonb",
+        "table": "services",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "reviews",
+        "type": "jsonb",
+        "table": "services",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "rating",
+        "type": "numeric(3,2)",
+        "table": "services",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "rating_count",
+        "type": "integer",
+        "table": "services",
+        "default": "0",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "service_status",
+        "table": "services",
+        "default": "'ACTIVE'::service_status",
+        "required": true
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "services",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "services",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "services",
+        "default": "'VISIBLE'::moderation_visibility",
+        "required": true
+      },
+      {
+        "name": "moderation_reason",
+        "type": "character varying(500)",
+        "table": "services",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "services",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "featured_on_landing",
+        "type": "boolean",
+        "table": "services",
+        "default": "false",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "services_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "teamup",
+        "default": "gen_random_uuid()",
+        "required": true
+      },
+      {
+        "name": "owner_id",
+        "type": "uuid",
+        "table": "teamup",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "character varying(180)",
+        "table": "teamup",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "table": "teamup",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "category",
+        "type": "character varying(100)",
+        "table": "teamup",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "required_skills",
+        "type": "text[]",
+        "table": "teamup",
+        "default": "ARRAY[]::text[]",
+        "required": false
+      },
+      {
+        "name": "members",
+        "type": "jsonb",
+        "table": "teamup",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "applications",
+        "type": "jsonb",
+        "table": "teamup",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "bookmarks",
+        "type": "jsonb",
+        "table": "teamup",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "images",
+        "type": "jsonb",
+        "table": "teamup",
+        "default": "'[]'::jsonb",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "project_status",
+        "table": "teamup",
+        "default": "'OPEN'::project_status",
+        "required": true
+      },
+      {
+        "name": "max_members",
+        "type": "smallint",
+        "table": "teamup",
+        "default": "5",
+        "required": true
+      },
+      {
+        "name": "deadline",
+        "type": "date",
+        "table": "teamup",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "teamup",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "teamup",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "moderation_visibility",
+        "type": "moderation_visibility",
+        "table": "teamup",
+        "default": "'VISIBLE'::moderation_visibility",
+        "required": true
+      },
+      {
+        "name": "moderation_reason",
+        "type": "character varying(500)",
+        "table": "teamup",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "moderated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "teamup",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "featured_on_landing",
+        "type": "boolean",
+        "table": "teamup",
+        "default": "false",
+        "required": true
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "teamup_pkey",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "participant_a_id",
+        "type": "uuid",
+        "table": "uq_conversations_identity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "participant_b_id",
+        "type": "uuid",
+        "table": "uq_conversations_identity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "context_type",
+        "type": "conversation_type",
+        "table": "uq_conversations_identity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "context_key",
+        "type": "character varying(36)",
+        "table": "uq_conversations_identity",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "users",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "citext",
+        "table": "users",
+        "default": null,
+        "required": true
+      },
+      {
+        "name": "role",
+        "type": "user_role",
+        "table": "users",
+        "default": "'STUDENT'::user_role",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "account_status",
+        "table": "users",
+        "default": "'ACTIVE'::account_status",
+        "required": true
+      },
+      {
+        "name": "email_verified_at",
+        "type": "timestamp(6) with time zone",
+        "table": "users",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "last_seen_at",
+        "type": "timestamp(6) with time zone",
+        "table": "users",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp(6) with time zone",
+        "table": "users",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp(6) with time zone",
+        "table": "users",
+        "default": "CURRENT_TIMESTAMP",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "citext",
+        "table": "users_email_key",
+        "default": null,
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "uuid",
+        "table": "users_pkey",
+        "default": null,
+        "required": false
+      }
+    ],
+    "constraints": [
+      {
+        "name": "activity_pkey",
+        "table": "activity",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "activity_user_id_fkey",
+        "table": "activity",
+        "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL"
+      },
+      {
+        "name": "ai_data_pkey",
+        "table": "ai_data",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "ai_data_user_id_fkey",
+        "table": "ai_data",
+        "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL"
+      },
+      {
+        "name": "conversations_canonical_participants",
+        "table": "conversations",
+        "definition": "CHECK ((participant_a_id < participant_b_id))"
+      },
+      {
+        "name": "conversations_context_identity",
+        "table": "conversations",
+        "definition": "CHECK ((((context_type = 'DIRECT'::conversation_type) AND (context_id IS NULL) AND ((context_key)::text = ''::text)) OR ((context_type <> 'DIRECT'::conversation_type) AND (context_id IS NOT NULL) AND ((context_key)::text = (context_id)::text))))"
+      },
+      {
+        "name": "conversations_participant_a_id_fkey",
+        "table": "conversations",
+        "definition": "FOREIGN KEY (participant_a_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "conversations_participant_b_id_fkey",
+        "table": "conversations",
+        "definition": "FOREIGN KEY (participant_b_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "conversations_pkey",
+        "table": "conversations",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "lost_found_pkey",
+        "table": "lost_found",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "lost_found_reporter_id_fkey",
+        "table": "lost_found",
+        "definition": "FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "marketplace_pkey",
+        "table": "marketplace",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "marketplace_seller_id_fkey",
+        "table": "marketplace",
+        "definition": "FOREIGN KEY (seller_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "messages_conversation_id_fkey",
+        "table": "messages",
+        "definition": "FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "messages_pkey",
+        "table": "messages",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "messages_receiver_id_fkey",
+        "table": "messages",
+        "definition": "FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "messages_sender_id_fkey",
+        "table": "messages",
+        "definition": "FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "notifications_pkey",
+        "table": "notifications",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "notifications_user_id_fkey",
+        "table": "notifications",
+        "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "professional_profiles_details_object_check",
+        "table": "professional_profiles",
+        "definition": "CHECK ((jsonb_typeof(details) = 'object'::text))"
+      },
+      {
+        "name": "professional_profiles_education_check",
+        "table": "professional_profiles",
+        "definition": "CHECK (\nCASE\n    WHEN (jsonb_typeof((details -> 'education'::text)) = 'array'::text) THEN (jsonb_array_length((details -> 'education'::text)) <= 5)\n    ELSE false\nEND)"
+      },
+      {
+        "name": "professional_profiles_experience_check",
+        "table": "professional_profiles",
+        "definition": "CHECK (\nCASE\n    WHEN (jsonb_typeof((details -> 'experience'::text)) = 'array'::text) THEN (jsonb_array_length((details -> 'experience'::text)) <= 5)\n    ELSE false\nEND)"
+      },
+      {
+        "name": "professional_profiles_headline_check",
+        "table": "professional_profiles",
+        "definition": "CHECK ((jsonb_typeof((details -> 'headline'::text)) = ANY (ARRAY['null'::text, 'string'::text])))"
+      },
+      {
+        "name": "professional_profiles_keys_check",
+        "table": "professional_profiles",
+        "definition": "CHECK (((details ?& ARRAY['headline'::text, 'education'::text, 'experience'::text]) AND ((details - ARRAY['headline'::text, 'education'::text, 'experience'::text]) = '{}'::jsonb)))"
+      },
+      {
+        "name": "professional_profiles_pkey",
+        "table": "professional_profiles",
+        "definition": "PRIMARY KEY (user_id)"
+      },
+      {
+        "name": "professional_profiles_user_id_fkey",
+        "table": "professional_profiles",
+        "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "profiles_pkey",
+        "table": "profiles",
+        "definition": "PRIMARY KEY (user_id)"
+      },
+      {
+        "name": "profiles_user_id_fkey",
+        "table": "profiles",
+        "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "name": "reports_pkey",
+        "table": "reports",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "reports_reporter_id_fkey",
+        "table": "reports",
+        "definition": "FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "reports_reviewed_by_fkey",
+        "table": "reports",
+        "definition": "FOREIGN KEY (reviewed_by) REFERENCES users(id) ON DELETE SET NULL"
+      },
+      {
+        "name": "services_pkey",
+        "table": "services",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "services_provider_id_fkey",
+        "table": "services",
+        "definition": "FOREIGN KEY (provider_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "teamup_owner_id_fkey",
+        "table": "teamup",
+        "definition": "FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "teamup_pkey",
+        "table": "teamup",
+        "definition": "PRIMARY KEY (id)"
+      },
+      {
+        "name": "users_pkey",
+        "table": "users",
+        "definition": "PRIMARY KEY (id)"
+      }
+    ],
+    "indexes": [
+      {
+        "name": "activity_pkey",
+        "definition": "CREATE UNIQUE INDEX activity_pkey ON public.activity USING btree (id)"
+      },
+      {
+        "name": "ai_data_pkey",
+        "definition": "CREATE UNIQUE INDEX ai_data_pkey ON public.ai_data USING btree (id)"
+      },
+      {
+        "name": "conversations_pkey",
+        "definition": "CREATE UNIQUE INDEX conversations_pkey ON public.conversations USING btree (id)"
+      },
+      {
+        "name": "idx_activity_created",
+        "definition": "CREATE INDEX idx_activity_created ON public.activity USING btree (created_at DESC)"
+      },
+      {
+        "name": "idx_activity_entity",
+        "definition": "CREATE INDEX idx_activity_entity ON public.activity USING btree (entity_type, entity_id, created_at DESC)"
+      },
+      {
+        "name": "idx_activity_event",
+        "definition": "CREATE INDEX idx_activity_event ON public.activity USING btree (event, created_at DESC)"
+      },
+      {
+        "name": "idx_activity_user",
+        "definition": "CREATE INDEX idx_activity_user ON public.activity USING btree (user_id, created_at DESC)"
+      },
+      {
+        "name": "idx_ai_score",
+        "definition": "CREATE INDEX idx_ai_score ON public.ai_data USING btree (type, score DESC)"
+      },
+      {
+        "name": "idx_ai_target",
+        "definition": "CREATE INDEX idx_ai_target ON public.ai_data USING btree (target_type, target_id)"
+      },
+      {
+        "name": "idx_ai_type",
+        "definition": "CREATE INDEX idx_ai_type ON public.ai_data USING btree (type, created_at DESC)"
+      },
+      {
+        "name": "idx_ai_user",
+        "definition": "CREATE INDEX idx_ai_user ON public.ai_data USING btree (user_id, created_at DESC)"
+      },
+      {
+        "name": "idx_conversations_participant_a",
+        "definition": "CREATE INDEX idx_conversations_participant_a ON public.conversations USING btree (participant_a_id, updated_at DESC)"
+      },
+      {
+        "name": "idx_conversations_participant_b",
+        "definition": "CREATE INDEX idx_conversations_participant_b ON public.conversations USING btree (participant_b_id, updated_at DESC)"
+      },
+      {
+        "name": "idx_lost_found_category",
+        "definition": "CREATE INDEX idx_lost_found_category ON public.lost_found USING btree (category, status)"
+      },
+      {
+        "name": "idx_lost_found_date",
+        "definition": "CREATE INDEX idx_lost_found_date ON public.lost_found USING btree (incident_date)"
+      },
+      {
+        "name": "idx_lost_found_feed",
+        "definition": "CREATE INDEX idx_lost_found_feed ON public.lost_found USING btree (status, created_at DESC, id DESC)"
+      },
+      {
+        "name": "idx_lost_found_landing_featured",
+        "definition": "CREATE INDEX idx_lost_found_landing_featured ON public.lost_found USING btree (status, created_at DESC) WHERE ((featured_on_landing = true) AND (moderation_visibility = 'VISIBLE'::moderation_visibility))"
+      },
+      {
+        "name": "idx_lost_found_location",
+        "definition": "CREATE INDEX idx_lost_found_location ON public.lost_found USING btree (location)"
+      },
+      {
+        "name": "idx_lost_found_moderation_visibility",
+        "definition": "CREATE INDEX idx_lost_found_moderation_visibility ON public.lost_found USING btree (moderation_visibility, status, created_at DESC)"
+      },
+      {
+        "name": "idx_lost_found_reporter",
+        "definition": "CREATE INDEX idx_lost_found_reporter ON public.lost_found USING btree (reporter_id, created_at DESC)"
+      },
+      {
+        "name": "idx_lost_found_type",
+        "definition": "CREATE INDEX idx_lost_found_type ON public.lost_found USING btree (type, status, created_at DESC)"
+      },
+      {
+        "name": "idx_marketplace_category",
+        "definition": "CREATE INDEX idx_marketplace_category ON public.marketplace USING btree (category, status, created_at DESC)"
+      },
+      {
+        "name": "idx_marketplace_condition",
+        "definition": "CREATE INDEX idx_marketplace_condition ON public.marketplace USING btree (condition, status)"
+      },
+      {
+        "name": "idx_marketplace_feed",
+        "definition": "CREATE INDEX idx_marketplace_feed ON public.marketplace USING btree (status, created_at DESC, id DESC)"
+      },
+      {
+        "name": "idx_marketplace_landing_featured",
+        "definition": "CREATE INDEX idx_marketplace_landing_featured ON public.marketplace USING btree (status, created_at DESC) WHERE ((featured_on_landing = true) AND (moderation_visibility = 'VISIBLE'::moderation_visibility))"
+      },
+      {
+        "name": "idx_marketplace_location",
+        "definition": "CREATE INDEX idx_marketplace_location ON public.marketplace USING btree (location)"
+      },
+      {
+        "name": "idx_marketplace_moderation_visibility",
+        "definition": "CREATE INDEX idx_marketplace_moderation_visibility ON public.marketplace USING btree (moderation_visibility, status, created_at DESC)"
+      },
+      {
+        "name": "idx_marketplace_price",
+        "definition": "CREATE INDEX idx_marketplace_price ON public.marketplace USING btree (status, price)"
+      },
+      {
+        "name": "idx_marketplace_seller",
+        "definition": "CREATE INDEX idx_marketplace_seller ON public.marketplace USING btree (seller_id, created_at DESC)"
+      },
+      {
+        "name": "idx_messages_context",
+        "definition": "CREATE INDEX idx_messages_context ON public.messages USING btree (context_type, context_id, created_at DESC)"
+      },
+      {
+        "name": "idx_messages_conversation",
+        "definition": "CREATE INDEX idx_messages_conversation ON public.messages USING btree (conversation_id, created_at DESC, id DESC)"
+      },
+      {
+        "name": "idx_messages_direct_chat",
+        "definition": "CREATE INDEX idx_messages_direct_chat ON public.messages USING btree (sender_id, receiver_id, created_at DESC)"
+      },
+      {
+        "name": "idx_messages_receiver",
+        "definition": "CREATE INDEX idx_messages_receiver ON public.messages USING btree (receiver_id, created_at DESC)"
+      },
+      {
+        "name": "idx_messages_sender",
+        "definition": "CREATE INDEX idx_messages_sender ON public.messages USING btree (sender_id, created_at DESC)"
+      },
+      {
+        "name": "idx_messages_unread",
+        "definition": "CREATE INDEX idx_messages_unread ON public.messages USING btree (receiver_id, created_at DESC) WHERE (read_at IS NULL)"
+      },
+      {
+        "name": "idx_notifications_unread",
+        "definition": "CREATE INDEX idx_notifications_unread ON public.notifications USING btree (user_id, created_at DESC) WHERE (read_at IS NULL)"
+      },
+      {
+        "name": "idx_notifications_user",
+        "definition": "CREATE INDEX idx_notifications_user ON public.notifications USING btree (user_id, created_at DESC)"
+      },
+      {
+        "name": "idx_profiles_department",
+        "definition": "CREATE INDEX idx_profiles_department ON public.profiles USING btree (department)"
+      },
+      {
+        "name": "idx_profiles_moderation_visibility",
+        "definition": "CREATE INDEX idx_profiles_moderation_visibility ON public.profiles USING btree (moderation_visibility, full_name)"
+      },
+      {
+        "name": "idx_profiles_name",
+        "definition": "CREATE INDEX idx_profiles_name ON public.profiles USING btree (full_name)"
+      },
+      {
+        "name": "idx_profiles_year",
+        "definition": "CREATE INDEX idx_profiles_year ON public.profiles USING btree (academic_year)"
+      },
+      {
+        "name": "idx_reports_reporter",
+        "definition": "CREATE INDEX idx_reports_reporter ON public.reports USING btree (reporter_id, created_at DESC)"
+      },
+      {
+        "name": "idx_reports_status",
+        "definition": "CREATE INDEX idx_reports_status ON public.reports USING btree (status, created_at DESC)"
+      },
+      {
+        "name": "idx_reports_target",
+        "definition": "CREATE INDEX idx_reports_target ON public.reports USING btree (target_type, target_id)"
+      },
+      {
+        "name": "idx_services_category",
+        "definition": "CREATE INDEX idx_services_category ON public.services USING btree (category, status)"
+      },
+      {
+        "name": "idx_services_feed",
+        "definition": "CREATE INDEX idx_services_feed ON public.services USING btree (status, created_at DESC, id DESC)"
+      },
+      {
+        "name": "idx_services_landing_featured",
+        "definition": "CREATE INDEX idx_services_landing_featured ON public.services USING btree (status, created_at DESC) WHERE ((featured_on_landing = true) AND (moderation_visibility = 'VISIBLE'::moderation_visibility))"
+      },
+      {
+        "name": "idx_services_moderation_visibility",
+        "definition": "CREATE INDEX idx_services_moderation_visibility ON public.services USING btree (moderation_visibility, status, created_at DESC)"
+      },
+      {
+        "name": "idx_services_price",
+        "definition": "CREATE INDEX idx_services_price ON public.services USING btree (status, price)"
+      },
+      {
+        "name": "idx_services_provider",
+        "definition": "CREATE INDEX idx_services_provider ON public.services USING btree (provider_id, created_at DESC)"
+      },
+      {
+        "name": "idx_teamup_category",
+        "definition": "CREATE INDEX idx_teamup_category ON public.teamup USING btree (category, status)"
+      },
+      {
+        "name": "idx_teamup_deadline",
+        "definition": "CREATE INDEX idx_teamup_deadline ON public.teamup USING btree (deadline) WHERE (status = 'OPEN'::project_status)"
+      },
+      {
+        "name": "idx_teamup_feed",
+        "definition": "CREATE INDEX idx_teamup_feed ON public.teamup USING btree (status, created_at DESC, id DESC)"
+      },
+      {
+        "name": "idx_teamup_landing_featured",
+        "definition": "CREATE INDEX idx_teamup_landing_featured ON public.teamup USING btree (status, created_at DESC) WHERE ((featured_on_landing = true) AND (moderation_visibility = 'VISIBLE'::moderation_visibility))"
+      },
+      {
+        "name": "idx_teamup_moderation_visibility",
+        "definition": "CREATE INDEX idx_teamup_moderation_visibility ON public.teamup USING btree (moderation_visibility, status, created_at DESC)"
+      },
+      {
+        "name": "idx_teamup_owner",
+        "definition": "CREATE INDEX idx_teamup_owner ON public.teamup USING btree (owner_id, created_at DESC)"
+      },
+      {
+        "name": "idx_users_last_seen",
+        "definition": "CREATE INDEX idx_users_last_seen ON public.users USING btree (last_seen_at DESC)"
+      },
+      {
+        "name": "idx_users_role",
+        "definition": "CREATE INDEX idx_users_role ON public.users USING btree (role)"
+      },
+      {
+        "name": "idx_users_status",
+        "definition": "CREATE INDEX idx_users_status ON public.users USING btree (status)"
+      },
+      {
+        "name": "lost_found_pkey",
+        "definition": "CREATE UNIQUE INDEX lost_found_pkey ON public.lost_found USING btree (id)"
+      },
+      {
+        "name": "marketplace_pkey",
+        "definition": "CREATE UNIQUE INDEX marketplace_pkey ON public.marketplace USING btree (id)"
+      },
+      {
+        "name": "messages_pkey",
+        "definition": "CREATE UNIQUE INDEX messages_pkey ON public.messages USING btree (id)"
+      },
+      {
+        "name": "notifications_pkey",
+        "definition": "CREATE UNIQUE INDEX notifications_pkey ON public.notifications USING btree (id)"
+      },
+      {
+        "name": "professional_profiles_pkey",
+        "definition": "CREATE UNIQUE INDEX professional_profiles_pkey ON public.professional_profiles USING btree (user_id)"
+      },
+      {
+        "name": "profiles_pkey",
+        "definition": "CREATE UNIQUE INDEX profiles_pkey ON public.profiles USING btree (user_id)"
+      },
+      {
+        "name": "profiles_username_key",
+        "definition": "CREATE UNIQUE INDEX profiles_username_key ON public.profiles USING btree (username)"
+      },
+      {
+        "name": "reports_pkey",
+        "definition": "CREATE UNIQUE INDEX reports_pkey ON public.reports USING btree (id)"
+      },
+      {
+        "name": "services_pkey",
+        "definition": "CREATE UNIQUE INDEX services_pkey ON public.services USING btree (id)"
+      },
+      {
+        "name": "teamup_pkey",
+        "definition": "CREATE UNIQUE INDEX teamup_pkey ON public.teamup USING btree (id)"
+      },
+      {
+        "name": "uq_conversations_identity",
+        "definition": "CREATE UNIQUE INDEX uq_conversations_identity ON public.conversations USING btree (participant_a_id, participant_b_id, context_type, context_key)"
+      },
+      {
+        "name": "users_email_key",
+        "definition": "CREATE UNIQUE INDEX users_email_key ON public.users USING btree (email)"
+      },
+      {
+        "name": "users_pkey",
+        "definition": "CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id)"
+      }
+    ],
+    "functions": [
+      {
+        "acl": null,
+        "args": "boolean",
+        "name": "citext",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext(boolean)\n RETURNS citext\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$booltext$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "character",
+        "name": "citext",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext(character)\n RETURNS citext\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$rtrim1$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "inet",
+        "name": "citext",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext(inet)\n RETURNS citext\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$network_show$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_cmp",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_cmp(citext, citext)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_cmp$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_eq",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_eq(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_eq$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_ge",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_ge(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_ge$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_gt",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_gt(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_gt$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext",
+        "name": "citext_hash",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_hash(citext)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_hash$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, bigint",
+        "name": "citext_hash_extended",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_hash_extended(citext, bigint)\n RETURNS bigint\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_hash_extended$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_larger",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_larger(citext, citext)\n RETURNS citext\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_larger$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_le",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_le(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_le$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_lt",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_lt(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_lt$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_ne",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_ne(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_ne$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_pattern_cmp",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_pattern_cmp(citext, citext)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_pattern_cmp$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_pattern_ge",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_pattern_ge(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_pattern_ge$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_pattern_gt",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_pattern_gt(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_pattern_gt$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_pattern_le",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_pattern_le(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_pattern_le$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_pattern_lt",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_pattern_lt(citext, citext)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_pattern_lt$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "citext_smaller",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citext_smaller(citext, citext)\n RETURNS citext\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/citext', $function$citext_smaller$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "cstring",
+        "name": "citextin",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citextin(cstring)\n RETURNS citext\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$textin$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext",
+        "name": "citextout",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citextout(citext)\n RETURNS cstring\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$textout$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "internal",
+        "name": "citextrecv",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citextrecv(internal)\n RETURNS citext\n LANGUAGE internal\n STABLE PARALLEL SAFE STRICT\nAS $function$textrecv$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext",
+        "name": "citextsend",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.citextsend(citext)\n RETURNS bytea\n LANGUAGE internal\n STABLE PARALLEL SAFE STRICT\nAS $function$textsend$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext",
+        "name": "max",
+        "owner": "postgres",
+        "config": null,
+        "definition": "{\"aggfnoid\":\"public.max\",\"aggkind\":\"n\",\"aggnumdirectargs\":0,\"aggtransfn\":\"citext_larger\",\"aggfinalfn\":\"-\",\"aggcombinefn\":\"citext_larger\",\"aggserialfn\":\"-\",\"aggdeserialfn\":\"-\",\"aggmtransfn\":\"-\",\"aggminvtransfn\":\"-\",\"aggmfinalfn\":\"-\",\"aggfinalextra\":false,\"aggmfinalextra\":false,\"aggfinalmodify\":\"r\",\"aggmfinalmodify\":\"r\",\"aggsortop\":\"28015\",\"aggtranstype\":\"27990\",\"aggtransspace\":0,\"aggmtranstype\":\"0\",\"aggmtransspace\":0,\"agginitval\":null,\"aggminitval\":null}",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext",
+        "name": "min",
+        "owner": "postgres",
+        "config": null,
+        "definition": "{\"aggfnoid\":\"public.min\",\"aggkind\":\"n\",\"aggnumdirectargs\":0,\"aggtransfn\":\"citext_smaller\",\"aggfinalfn\":\"-\",\"aggcombinefn\":\"citext_smaller\",\"aggserialfn\":\"-\",\"aggdeserialfn\":\"-\",\"aggmtransfn\":\"-\",\"aggminvtransfn\":\"-\",\"aggmfinalfn\":\"-\",\"aggfinalextra\":false,\"aggmfinalextra\":false,\"aggfinalmodify\":\"r\",\"aggmfinalmodify\":\"r\",\"aggsortop\":\"28017\",\"aggtranstype\":\"27990\",\"aggtransspace\":0,\"aggmtranstype\":\"0\",\"aggmtransspace\":0,\"agginitval\":null,\"aggminitval\":null}",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "regexp_match",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_match(citext, citext)\n RETURNS text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_match( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "regexp_match",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_match(citext, citext, text)\n RETURNS text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_match( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "regexp_matches",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_matches(citext, citext)\n RETURNS SETOF text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT ROWS 1\nAS $function$\n    SELECT pg_catalog.regexp_matches( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "regexp_matches",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_matches(citext, citext, text)\n RETURNS SETOF text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT ROWS 10\nAS $function$\n    SELECT pg_catalog.regexp_matches( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "regexp_replace",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_replace(citext, citext, text)\n RETURNS text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, $2::pg_catalog.text, $3, 'i');\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text, text",
+        "name": "regexp_replace",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_replace(citext, citext, text, text)\n RETURNS text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, $2::pg_catalog.text, $3, CASE WHEN pg_catalog.strpos($4, 'c') = 0 THEN  $4 || 'i' ELSE $4 END);\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "regexp_split_to_array",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_split_to_array(citext, citext)\n RETURNS text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_split_to_array( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "regexp_split_to_array",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_split_to_array(citext, citext, text)\n RETURNS text[]\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_split_to_array( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "regexp_split_to_table",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_split_to_table(citext, citext)\n RETURNS SETOF text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_split_to_table( $1::pg_catalog.text, $2::pg_catalog.text, 'i' );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "regexp_split_to_table",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.regexp_split_to_table(citext, citext, text)\n RETURNS SETOF text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_split_to_table( $1::pg_catalog.text, $2::pg_catalog.text, CASE WHEN pg_catalog.strpos($3, 'c') = 0 THEN  $3 || 'i' ELSE $3 END );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, citext",
+        "name": "replace",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.replace(citext, citext, citext)\n RETURNS text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.regexp_replace( $1::pg_catalog.text, pg_catalog.regexp_replace($2::pg_catalog.text, '([^a-zA-Z_0-9])', E'\\\\\\\\\\\\1', 'g'), $3::pg_catalog.text, 'gi' );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, integer",
+        "name": "split_part",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.split_part(citext, citext, integer)\n RETURNS text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT (pg_catalog.regexp_split_to_array( $1::pg_catalog.text, pg_catalog.regexp_replace($2::pg_catalog.text, '([^a-zA-Z_0-9])', E'\\\\\\\\\\\\1', 'g'), 'i'))[$3];\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "strpos",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.strpos(citext, citext)\n RETURNS integer\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.strpos( pg_catalog.lower( $1::pg_catalog.text ), pg_catalog.lower( $2::pg_catalog.text ) );\n$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "texticlike",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticlike(citext, citext)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticlike$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, text",
+        "name": "texticlike",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticlike(citext, text)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticlike$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "texticnlike",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticnlike(citext, citext)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticnlike$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, text",
+        "name": "texticnlike",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticnlike(citext, text)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticnlike$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "texticregexeq",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticregexeq(citext, citext)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticregexeq$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, text",
+        "name": "texticregexeq",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticregexeq(citext, text)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticregexeq$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext",
+        "name": "texticregexne",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticregexne(citext, citext)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticregexne$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, text",
+        "name": "texticregexne",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.texticregexne(citext, text)\n RETURNS boolean\n LANGUAGE internal\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$texticregexne$function$\n",
+        "securityDefiner": false
+      },
+      {
+        "acl": null,
+        "args": "citext, citext, text",
+        "name": "translate",
+        "owner": "postgres",
+        "config": null,
+        "definition": "CREATE OR REPLACE FUNCTION public.translate(citext, citext, text)\n RETURNS text\n LANGUAGE sql\n IMMUTABLE PARALLEL SAFE STRICT\nAS $function$\n    SELECT pg_catalog.translate( pg_catalog.translate( $1::pg_catalog.text, pg_catalog.lower($2::pg_catalog.text), $3), pg_catalog.upper($2::pg_catalog.text), $3);\n$function$\n",
+        "securityDefiner": false
+      }
+    ],
+    "types": [
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_account_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_activity",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_ai_data",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_ai_type",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_booking_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_citext",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_claim_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_conversation_type",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_conversations",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_listing_condition",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_listing_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_lost_found",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_lost_found_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_lost_found_type",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_marketplace",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_match_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_messages",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_moderation_visibility",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_notification_type",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_notifications",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_professional_profiles",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_profiles",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_project_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_report_reason",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_report_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_reports",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_service_status",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_services",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_teamup",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_user_role",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "_users",
+        "category": "A"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "account_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "activity",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "ai_data",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "ai_type",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "booking_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "b",
+        "name": "citext",
+        "category": "S"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "claim_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "conversation_type",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "conversations",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "listing_condition",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "listing_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "lost_found",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "lost_found_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "lost_found_type",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "marketplace",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "match_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "messages",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "moderation_visibility",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "notification_type",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "notifications",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "professional_profiles",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "profiles",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "project_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "report_reason",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "report_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "reports",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "service_status",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "services",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "teamup",
+        "category": "C"
+      },
+      {
+        "base": "-",
+        "kind": "e",
+        "name": "user_role",
+        "category": "E"
+      },
+      {
+        "base": "-",
+        "kind": "c",
+        "name": "users",
+        "category": "C"
+      }
+    ],
+    "enums": [
+      {
+        "name": "account_status",
+        "label": "ACTIVE"
+      },
+      {
+        "name": "account_status",
+        "label": "SUSPENDED"
+      },
+      {
+        "name": "account_status",
+        "label": "DEACTIVATED"
+      },
+      {
+        "name": "ai_type",
+        "label": "LOST_FOUND_MATCH"
+      },
+      {
+        "name": "ai_type",
+        "label": "RECOMMENDATION"
+      },
+      {
+        "name": "ai_type",
+        "label": "CAMPUS_ASSISTANT"
+      },
+      {
+        "name": "ai_type",
+        "label": "LISTING_ASSISTANT"
+      },
+      {
+        "name": "ai_type",
+        "label": "MODERATION"
+      },
+      {
+        "name": "ai_type",
+        "label": "TEAM_MATCH"
+      },
+      {
+        "name": "booking_status",
+        "label": "PENDING"
+      },
+      {
+        "name": "booking_status",
+        "label": "ACCEPTED"
+      },
+      {
+        "name": "booking_status",
+        "label": "REJECTED"
+      },
+      {
+        "name": "booking_status",
+        "label": "CANCELLED"
+      },
+      {
+        "name": "booking_status",
+        "label": "COMPLETED"
+      },
+      {
+        "name": "claim_status",
+        "label": "PENDING"
+      },
+      {
+        "name": "claim_status",
+        "label": "APPROVED"
+      },
+      {
+        "name": "claim_status",
+        "label": "REJECTED"
+      },
+      {
+        "name": "claim_status",
+        "label": "CANCELLED"
+      },
+      {
+        "name": "conversation_type",
+        "label": "DIRECT"
+      },
+      {
+        "name": "conversation_type",
+        "label": "MARKETPLACE"
+      },
+      {
+        "name": "conversation_type",
+        "label": "TEAMUP"
+      },
+      {
+        "name": "conversation_type",
+        "label": "SERVICE"
+      },
+      {
+        "name": "conversation_type",
+        "label": "LOST_FOUND"
+      },
+      {
+        "name": "listing_condition",
+        "label": "NEW"
+      },
+      {
+        "name": "listing_condition",
+        "label": "LIKE_NEW"
+      },
+      {
+        "name": "listing_condition",
+        "label": "GOOD"
+      },
+      {
+        "name": "listing_condition",
+        "label": "FAIR"
+      },
+      {
+        "name": "listing_condition",
+        "label": "POOR"
+      },
+      {
+        "name": "listing_status",
+        "label": "ACTIVE"
+      },
+      {
+        "name": "listing_status",
+        "label": "SOLD"
+      },
+      {
+        "name": "listing_status",
+        "label": "ARCHIVED"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "OPEN"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "MATCHED"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "CLAIM_PENDING"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "RESOLVED"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "ARCHIVED"
+      },
+      {
+        "name": "lost_found_status",
+        "label": "REMOVED"
+      },
+      {
+        "name": "lost_found_type",
+        "label": "LOST"
+      },
+      {
+        "name": "lost_found_type",
+        "label": "FOUND"
+      },
+      {
+        "name": "match_status",
+        "label": "PENDING"
+      },
+      {
+        "name": "match_status",
+        "label": "REVIEWED"
+      },
+      {
+        "name": "match_status",
+        "label": "DISMISSED"
+      },
+      {
+        "name": "match_status",
+        "label": "ACCEPTED"
+      },
+      {
+        "name": "moderation_visibility",
+        "label": "VISIBLE"
+      },
+      {
+        "name": "moderation_visibility",
+        "label": "HIDDEN"
+      },
+      {
+        "name": "notification_type",
+        "label": "MESSAGE"
+      },
+      {
+        "name": "notification_type",
+        "label": "TEAM_APPLICATION"
+      },
+      {
+        "name": "notification_type",
+        "label": "BOOKING"
+      },
+      {
+        "name": "notification_type",
+        "label": "CLAIM"
+      },
+      {
+        "name": "notification_type",
+        "label": "MATCH"
+      },
+      {
+        "name": "notification_type",
+        "label": "LISTING"
+      },
+      {
+        "name": "notification_type",
+        "label": "SYSTEM"
+      },
+      {
+        "name": "notification_type",
+        "label": "ANNOUNCEMENT"
+      },
+      {
+        "name": "project_status",
+        "label": "OPEN"
+      },
+      {
+        "name": "project_status",
+        "label": "FULL"
+      },
+      {
+        "name": "project_status",
+        "label": "COMPLETED"
+      },
+      {
+        "name": "project_status",
+        "label": "ARCHIVED"
+      },
+      {
+        "name": "report_reason",
+        "label": "SPAM"
+      },
+      {
+        "name": "report_reason",
+        "label": "SCAM"
+      },
+      {
+        "name": "report_reason",
+        "label": "HARASSMENT"
+      },
+      {
+        "name": "report_reason",
+        "label": "INAPPROPRIATE_CONTENT"
+      },
+      {
+        "name": "report_reason",
+        "label": "FAKE_LISTING"
+      },
+      {
+        "name": "report_reason",
+        "label": "FAKE_PROFILE"
+      },
+      {
+        "name": "report_reason",
+        "label": "DUPLICATE"
+      },
+      {
+        "name": "report_reason",
+        "label": "OTHER"
+      },
+      {
+        "name": "report_status",
+        "label": "OPEN"
+      },
+      {
+        "name": "report_status",
+        "label": "UNDER_REVIEW"
+      },
+      {
+        "name": "report_status",
+        "label": "RESOLVED"
+      },
+      {
+        "name": "report_status",
+        "label": "DISMISSED"
+      },
+      {
+        "name": "service_status",
+        "label": "ACTIVE"
+      },
+      {
+        "name": "service_status",
+        "label": "PAUSED"
+      },
+      {
+        "name": "service_status",
+        "label": "ARCHIVED"
+      },
+      {
+        "name": "user_role",
+        "label": "STUDENT"
+      },
+      {
+        "name": "user_role",
+        "label": "MODERATOR"
+      },
+      {
+        "name": "user_role",
+        "label": "ADMIN"
+      }
+    ],
+    "policies": null
+  }
+}

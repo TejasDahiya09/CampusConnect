@@ -1,0 +1,359 @@
+{
+  "baseline": {
+    "by_difficulty": {
+      "EASY": {
+        "mrr": 0.9555555555555556,
+        "precision_at_1": 0.9133333333333333,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "HARD": {
+        "mrr": 0.10428571428571429,
+        "precision_at_1": 0.04,
+        "precision_at_3": 0.04952380952380952,
+        "recall_at_3": 0.14857142857142858,
+        "recall_at_5": 0.24571428571428572
+      },
+      "MODERATE": {
+        "mrr": 0.0025714285714285713,
+        "precision_at_1": 0.0,
+        "precision_at_3": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.011428571428571429
+      }
+    },
+    "candidate_pool": 500,
+    "candidate_pool_methodology": "Each LOST report ranks against all generated FOUND reports.",
+    "error_examples": [
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-025",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-027",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-045",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-067",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-071",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-079",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-087",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-091",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-097",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-103",
+        "true_match_rank": 2
+      }
+    ],
+    "matcher_version": "lf-baseline-v1",
+    "overall": {
+      "mrr": 0.32406666666666667,
+      "precision_at_1": 0.288,
+      "precision_at_3": 0.11733333333333333,
+      "recall_at_3": 0.352,
+      "recall_at_5": 0.39
+    }
+  },
+  "benchmark_version": "lost-found-benchmark-v2",
+  "delta_semantic_minus_baseline": {
+    "hard": {
+      "mrr": 0.26961904761904765,
+      "precision_at_1": 0.13714285714285712,
+      "precision_at_3": 0.12380952380952381,
+      "recall_at_3": 0.37142857142857144,
+      "recall_at_5": 0.5142857142857142
+    },
+    "overall": {
+      "mrr": 0.14029999999999998,
+      "precision_at_1": 0.07400000000000001,
+      "precision_at_3": 0.05866666666666666,
+      "recall_at_3": 0.17600000000000005,
+      "recall_at_5": 0.28
+    }
+  },
+  "error_analysis": {
+    "baseline_beats_semantic": [
+      {
+        "baseline_rank": 1,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-017",
+        "semantic_rank": 2
+      },
+      {
+        "baseline_rank": 1,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-065",
+        "semantic_rank": 2
+      },
+      {
+        "baseline_rank": 1,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-129",
+        "semantic_rank": 2
+      },
+      {
+        "baseline_rank": 1,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-145",
+        "semantic_rank": 2
+      },
+      {
+        "baseline_rank": 1,
+        "difficulty": "HARD",
+        "query_id": "v2-lost-471",
+        "semantic_rank": 4
+      },
+      {
+        "baseline_rank": 1,
+        "difficulty": "HARD",
+        "query_id": "v2-lost-484",
+        "semantic_rank": 2
+      }
+    ],
+    "both_miss_top_five": [
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-153",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-154",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-155",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-157",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-158",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-159",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-161",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-163",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-165",
+        "semantic_rank": null
+      },
+      {
+        "baseline_rank": null,
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-167",
+        "semantic_rank": null
+      }
+    ],
+    "semantic_improves_to_first": [
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-027",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-045",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-067",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-071",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-079",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-087",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-091",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-097",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-103",
+        "semantic_rank": 1
+      },
+      {
+        "baseline_rank": 2,
+        "difficulty": "EASY",
+        "query_id": "v2-lost-119",
+        "semantic_rank": 1
+      }
+    ]
+  },
+  "random_seed": 20261020,
+  "report_count": 1000,
+  "semantic": {
+    "by_difficulty": {
+      "EASY": {
+        "mrr": 0.9746666666666666,
+        "precision_at_1": 0.9533333333333334,
+        "precision_at_3": 0.3311111111111111,
+        "recall_at_3": 0.9933333333333333,
+        "recall_at_5": 1.0
+      },
+      "HARD": {
+        "mrr": 0.3739047619047619,
+        "precision_at_1": 0.17714285714285713,
+        "precision_at_3": 0.17333333333333334,
+        "recall_at_3": 0.52,
+        "recall_at_5": 0.76
+      },
+      "MODERATE": {
+        "mrr": 0.11742857142857144,
+        "precision_at_1": 0.04,
+        "precision_at_3": 0.045714285714285714,
+        "recall_at_3": 0.13714285714285715,
+        "recall_at_5": 0.29714285714285715
+      }
+    },
+    "candidate_pool": 500,
+    "candidate_pool_methodology": "Each LOST report ranks against all generated FOUND reports.",
+    "error_examples": [
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-017",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-025",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-065",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-121",
+        "true_match_rank": 5
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-129",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-138",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "EASY",
+        "query_id": "v2-lost-145",
+        "true_match_rank": 2
+      },
+      {
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-150",
+        "true_match_rank": 3
+      },
+      {
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-151",
+        "true_match_rank": 5
+      },
+      {
+        "difficulty": "MODERATE",
+        "query_id": "v2-lost-152",
+        "true_match_rank": 2
+      }
+    ],
+    "matcher_version": "lf-semantic-v1",
+    "overall": {
+      "mrr": 0.46436666666666665,
+      "precision_at_1": 0.362,
+      "precision_at_3": 0.176,
+      "recall_at_3": 0.528,
+      "recall_at_5": 0.67
+    }
+  }
+}

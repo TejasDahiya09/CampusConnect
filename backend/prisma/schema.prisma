@@ -1,0 +1,509 @@
+generator client {
+  provider        = "prisma-client"
+  output          = "../src/generated/prisma"
+  previewFeatures = ["partialIndexes"]
+  moduleFormat    = "esm"
+  runtime         = "nodejs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  STUDENT
+  MODERATOR
+  ADMIN
+
+  @@map("user_role")
+}
+
+enum AccountStatus {
+  ACTIVE
+  SUSPENDED
+  DEACTIVATED
+
+  @@map("account_status")
+}
+
+enum ListingStatus {
+  ACTIVE
+  SOLD
+  ARCHIVED
+
+  @@map("listing_status")
+}
+
+enum ListingCondition {
+  NEW
+  LIKE_NEW
+  GOOD
+  FAIR
+  POOR
+
+  @@map("listing_condition")
+}
+
+enum LostFoundType {
+  LOST
+  FOUND
+
+  @@map("lost_found_type")
+}
+
+enum LostFoundStatus {
+  OPEN
+  MATCHED
+  CLAIM_PENDING
+  RESOLVED
+  ARCHIVED
+  REMOVED
+
+  @@map("lost_found_status")
+}
+
+enum ClaimStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+
+  @@map("claim_status")
+}
+
+enum ProjectStatus {
+  OPEN
+  FULL
+  COMPLETED
+  ARCHIVED
+
+  @@map("project_status")
+}
+
+enum ServiceStatus {
+  ACTIVE
+  PAUSED
+  ARCHIVED
+
+  @@map("service_status")
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CANCELLED
+  COMPLETED
+
+  @@map("booking_status")
+}
+
+enum ConversationType {
+  DIRECT
+  MARKETPLACE
+  TEAMUP
+  SERVICE
+  LOST_FOUND
+
+  @@map("conversation_type")
+}
+
+enum NotificationType {
+  MESSAGE
+  TEAM_APPLICATION
+  BOOKING
+  CLAIM
+  MATCH
+  LISTING
+  SYSTEM
+  ANNOUNCEMENT
+
+  @@map("notification_type")
+}
+
+enum ReportStatus {
+  OPEN
+  UNDER_REVIEW
+  RESOLVED
+  DISMISSED
+
+  @@map("report_status")
+}
+
+enum ModerationVisibility {
+  VISIBLE
+  HIDDEN
+
+  @@map("moderation_visibility")
+}
+
+enum ReportReason {
+  SPAM
+  SCAM
+  HARASSMENT
+  INAPPROPRIATE_CONTENT
+  FAKE_LISTING
+  FAKE_PROFILE
+  DUPLICATE
+  OTHER
+
+  @@map("report_reason")
+}
+
+enum AIType {
+  LOST_FOUND_MATCH
+  RECOMMENDATION
+  CAMPUS_ASSISTANT
+  LISTING_ASSISTANT
+  MODERATION
+  TEAM_MATCH
+
+  @@map("ai_type")
+}
+
+enum MatchStatus {
+  PENDING
+  REVIEWED
+  DISMISSED
+  ACCEPTED
+
+  @@map("match_status")
+}
+
+model User {
+  professionalProfile ProfessionalProfile?
+  id                  String               @id @db.Uuid
+  email               String               @unique @db.Citext
+  role                UserRole             @default(STUDENT)
+  status              AccountStatus        @default(ACTIVE)
+  emailVerifiedAt     DateTime?            @map("email_verified_at") @db.Timestamptz(6)
+  lastSeenAt          DateTime?            @map("last_seen_at") @db.Timestamptz(6)
+  createdAt           DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  profile             Profile?
+  marketplaceItems    Marketplace[]
+  lostFoundItems      LostFound[]
+  teamupProjects      TeamUp[]
+  services            Service[]
+  sentMessages        Message[]            @relation("MessageSender")
+  receivedMessages    Message[]            @relation("MessageReceiver")
+  conversationsAsA    Conversation[]       @relation("ConversationParticipantA")
+  conversationsAsB    Conversation[]       @relation("ConversationParticipantB")
+  notifications       Notification[]
+  reportsFiled        Report[]             @relation("ReportReporter")
+  reportsReviewed     Report[]             @relation("ReportReviewer")
+  aiData              AIData[]
+  activity            Activity[]
+
+  @@index([lastSeenAt(sort: Desc)], map: "idx_users_last_seen")
+  @@index([role], map: "idx_users_role")
+  @@index([status], map: "idx_users_status")
+  @@map("users")
+}
+
+model Profile {
+  userId               String               @id @map("user_id") @db.Uuid
+  fullName             String               @map("full_name") @db.VarChar(120)
+  username             String?              @unique @db.Citext
+  university           String?              @db.VarChar(160)
+  department           String?              @db.VarChar(120)
+  academicYear         Int?                 @map("academic_year") @db.SmallInt
+  bio                  String?              @db.VarChar(1000)
+  location             String?              @db.VarChar(180)
+  avatar               Json?
+  skills               String[]             @default([])
+  skillProficiencies   Json                 @default("{}") @map("skill_proficiencies")
+  interests            String[]             @default([])
+  achievements         Json                 @default("[]")
+  portfolio            Json                 @default("[]")
+  rating               Decimal              @default(0) @db.Decimal(3, 2)
+  ratingCount          Int                  @default(0) @map("rating_count")
+  profileCompletion    Int                  @default(0) @map("profile_completion") @db.SmallInt
+  createdAt            DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  moderationVisibility ModerationVisibility @default(VISIBLE) @map("moderation_visibility")
+  moderationReason     String?              @map("moderation_reason") @db.VarChar(500)
+  moderatedAt          DateTime?            @map("moderated_at") @db.Timestamptz(6)
+  user                 User                 @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([department], map: "idx_profiles_department")
+  @@index([fullName], map: "idx_profiles_name")
+  @@index([academicYear], map: "idx_profiles_year")
+  @@index([moderationVisibility, fullName], map: "idx_profiles_moderation_visibility")
+  @@map("profiles")
+}
+
+model Marketplace {
+  id                   String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  sellerId             String               @map("seller_id") @db.Uuid
+  title                String               @db.VarChar(180)
+  description          String?
+  category             String               @db.VarChar(100)
+  price                Decimal              @db.Decimal(12, 2)
+  currency             String               @default("INR") @db.Char(3)
+  condition            ListingCondition
+  status               ListingStatus        @default(ACTIVE)
+  location             String?              @db.VarChar(180)
+  images               Json                 @default("[]")
+  bookmarks            Json                 @default("[]")
+  reviews              Json                 @default("[]")
+  rating               Decimal              @default(0) @db.Decimal(3, 2)
+  ratingCount          Int                  @default(0) @map("rating_count")
+  viewCount            Int                  @default(0) @map("view_count")
+  soldAt               DateTime?            @map("sold_at") @db.Timestamptz(6)
+  createdAt            DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  moderationVisibility ModerationVisibility @default(VISIBLE) @map("moderation_visibility")
+  moderationReason     String?              @map("moderation_reason") @db.VarChar(500)
+  moderatedAt          DateTime?            @map("moderated_at") @db.Timestamptz(6)
+  featuredOnLanding    Boolean              @default(false) @map("featured_on_landing")
+  seller               User                 @relation(fields: [sellerId], references: [id], onUpdate: NoAction)
+
+  @@index([category, status, createdAt(sort: Desc)], map: "idx_marketplace_category")
+  @@index([condition, status], map: "idx_marketplace_condition")
+  @@index([status, createdAt(sort: Desc), id(sort: Desc)], map: "idx_marketplace_feed")
+  @@index([location], map: "idx_marketplace_location")
+  @@index([status, price], map: "idx_marketplace_price")
+  @@index([sellerId, createdAt(sort: Desc)], map: "idx_marketplace_seller")
+  @@index([moderationVisibility, status, createdAt(sort: Desc)], map: "idx_marketplace_moderation_visibility")
+  @@index([status, createdAt(sort: Desc)], map: "idx_marketplace_landing_featured", where: raw("(featured_on_landing = true AND moderation_visibility = 'VISIBLE'::moderation_visibility)"))
+  @@map("marketplace")
+}
+
+model LostFound {
+  id                   String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  reporterId           String               @map("reporter_id") @db.Uuid
+  type                 LostFoundType
+  status               LostFoundStatus      @default(OPEN)
+  category             String?              @db.VarChar(100)
+  title                String               @db.VarChar(180)
+  description          String
+  location             String?              @db.VarChar(180)
+  incidentDate         DateTime?            @map("incident_date") @db.Date
+  images               Json                 @default("[]")
+  bookmarks            Json                 @default("[]")
+  claims               Json                 @default("[]")
+  matches              Json                 @default("[]")
+  resolvedAt           DateTime?            @map("resolved_at") @db.Timestamptz(6)
+  createdAt            DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  moderationVisibility ModerationVisibility @default(VISIBLE) @map("moderation_visibility")
+  moderationReason     String?              @map("moderation_reason") @db.VarChar(500)
+  moderatedAt          DateTime?            @map("moderated_at") @db.Timestamptz(6)
+  featuredOnLanding    Boolean              @default(false) @map("featured_on_landing")
+  reporter             User                 @relation(fields: [reporterId], references: [id], onUpdate: NoAction)
+
+  @@index([category, status], map: "idx_lost_found_category")
+  @@index([incidentDate], map: "idx_lost_found_date")
+  @@index([status, createdAt(sort: Desc), id(sort: Desc)], map: "idx_lost_found_feed")
+  @@index([location], map: "idx_lost_found_location")
+  @@index([reporterId, createdAt(sort: Desc)], map: "idx_lost_found_reporter")
+  @@index([type, status, createdAt(sort: Desc)], map: "idx_lost_found_type")
+  @@index([moderationVisibility, status, createdAt(sort: Desc)], map: "idx_lost_found_moderation_visibility")
+  @@index([status, createdAt(sort: Desc)], map: "idx_lost_found_landing_featured", where: raw("(featured_on_landing = true AND moderation_visibility = 'VISIBLE'::moderation_visibility)"))
+  @@map("lost_found")
+}
+
+model TeamUp {
+  id                   String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  ownerId              String               @map("owner_id") @db.Uuid
+  title                String               @db.VarChar(180)
+  description          String
+  category             String?              @db.VarChar(100)
+  requiredSkills       String[]             @default([]) @map("required_skills")
+  members              Json                 @default("[]")
+  applications         Json                 @default("[]")
+  bookmarks            Json                 @default("[]")
+  images               Json                 @default("[]")
+  status               ProjectStatus        @default(OPEN)
+  maxMembers           Int                  @default(5) @map("max_members") @db.SmallInt
+  deadline             DateTime?            @db.Date
+  createdAt            DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  moderationVisibility ModerationVisibility @default(VISIBLE) @map("moderation_visibility")
+  moderationReason     String?              @map("moderation_reason") @db.VarChar(500)
+  moderatedAt          DateTime?            @map("moderated_at") @db.Timestamptz(6)
+  featuredOnLanding    Boolean              @default(false) @map("featured_on_landing")
+  owner                User                 @relation(fields: [ownerId], references: [id], onUpdate: NoAction)
+
+  @@index([category, status], map: "idx_teamup_category")
+  @@index([deadline], map: "idx_teamup_deadline", where: raw("(status = 'OPEN'::project_status)"))
+  @@index([status, createdAt(sort: Desc), id(sort: Desc)], map: "idx_teamup_feed")
+  @@index([ownerId, createdAt(sort: Desc)], map: "idx_teamup_owner")
+  @@index([moderationVisibility, status, createdAt(sort: Desc)], map: "idx_teamup_moderation_visibility")
+  @@index([status, createdAt(sort: Desc)], map: "idx_teamup_landing_featured", where: raw("(featured_on_landing = true AND moderation_visibility = 'VISIBLE'::moderation_visibility)"))
+  @@map("teamup")
+}
+
+model Service {
+  id                   String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  providerId           String               @map("provider_id") @db.Uuid
+  title                String               @db.VarChar(180)
+  description          String
+  category             String               @db.VarChar(100)
+  skills               String[]             @default([])
+  price                Decimal?             @db.Decimal(12, 2)
+  currency             String               @default("INR") @db.Char(3)
+  location             String?              @db.VarChar(180)
+  images               Json                 @default("[]")
+  portfolio            Json                 @default("[]")
+  bookmarks            Json                 @default("[]")
+  bookings             Json                 @default("[]")
+  reviews              Json                 @default("[]")
+  rating               Decimal              @default(0) @db.Decimal(3, 2)
+  ratingCount          Int                  @default(0) @map("rating_count")
+  status               ServiceStatus        @default(ACTIVE)
+  createdAt            DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime             @default(now()) @map("updated_at") @db.Timestamptz(6)
+  moderationVisibility ModerationVisibility @default(VISIBLE) @map("moderation_visibility")
+  moderationReason     String?              @map("moderation_reason") @db.VarChar(500)
+  moderatedAt          DateTime?            @map("moderated_at") @db.Timestamptz(6)
+  featuredOnLanding    Boolean              @default(false) @map("featured_on_landing")
+  provider             User                 @relation(fields: [providerId], references: [id], onUpdate: NoAction)
+
+  @@index([category, status], map: "idx_services_category")
+  @@index([status, createdAt(sort: Desc), id(sort: Desc)], map: "idx_services_feed")
+  @@index([status, price], map: "idx_services_price")
+  @@index([providerId, createdAt(sort: Desc)], map: "idx_services_provider")
+  @@index([moderationVisibility, status, createdAt(sort: Desc)], map: "idx_services_moderation_visibility")
+  @@index([status, createdAt(sort: Desc)], map: "idx_services_landing_featured", where: raw("(featured_on_landing = true AND moderation_visibility = 'VISIBLE'::moderation_visibility)"))
+  @@map("services")
+}
+
+model Conversation {
+  id             String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  participantAId String           @map("participant_a_id") @db.Uuid
+  participantBId String           @map("participant_b_id") @db.Uuid
+  contextType    ConversationType @default(DIRECT) @map("context_type")
+  contextId      String?          @map("context_id") @db.Uuid
+  contextKey     String           @default("") @map("context_key") @db.VarChar(36)
+  createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime         @default(now()) @map("updated_at") @db.Timestamptz(6)
+  participantA   User             @relation("ConversationParticipantA", fields: [participantAId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  participantB   User             @relation("ConversationParticipantB", fields: [participantBId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  messages       Message[]
+
+  @@unique([participantAId, participantBId, contextType, contextKey], map: "uq_conversations_identity")
+  @@index([participantAId, updatedAt(sort: Desc)], map: "idx_conversations_participant_a")
+  @@index([participantBId, updatedAt(sort: Desc)], map: "idx_conversations_participant_b")
+  @@map("conversations")
+}
+
+model Message {
+  id                String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  conversationId    String           @map("conversation_id") @db.Uuid
+  senderId          String           @map("sender_id") @db.Uuid
+  receiverId        String           @map("receiver_id") @db.Uuid
+  contextType       ConversationType @default(DIRECT) @map("context_type")
+  contextId         String?          @map("context_id") @db.Uuid
+  encryptedContent  Bytes            @map("encrypted_content")
+  encryptionIv      Bytes            @map("encryption_iv")
+  encryptionTag     Bytes            @map("encryption_tag")
+  encryptionVersion Int              @default(1) @map("encryption_version") @db.SmallInt
+  attachments       Json             @default("[]")
+  readAt            DateTime?        @map("read_at") @db.Timestamptz(6)
+  editedAt          DateTime?        @map("edited_at") @db.Timestamptz(6)
+  deletedAt         DateTime?        @map("deleted_at") @db.Timestamptz(6)
+  createdAt         DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+  sender            User             @relation("MessageSender", fields: [senderId], references: [id], onUpdate: NoAction)
+  receiver          User             @relation("MessageReceiver", fields: [receiverId], references: [id], onUpdate: NoAction)
+  conversation      Conversation     @relation(fields: [conversationId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([contextType, contextId, createdAt(sort: Desc)], map: "idx_messages_context")
+  @@index([senderId, receiverId, createdAt(sort: Desc)], map: "idx_messages_direct_chat")
+  @@index([receiverId, createdAt(sort: Desc)], map: "idx_messages_receiver")
+  @@index([senderId, createdAt(sort: Desc)], map: "idx_messages_sender")
+  @@index([conversationId, createdAt(sort: Desc), id(sort: Desc)], map: "idx_messages_conversation")
+  @@index([receiverId, createdAt(sort: Desc)], map: "idx_messages_unread", where: raw("(read_at IS NULL)"))
+  @@map("messages")
+}
+
+model Notification {
+  id        String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String           @map("user_id") @db.Uuid
+  type      NotificationType
+  title     String           @db.VarChar(180)
+  message   String?          @db.VarChar(1000)
+  data      Json             @default("{}")
+  readAt    DateTime?        @map("read_at") @db.Timestamptz(6)
+  createdAt DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime         @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([userId, createdAt(sort: Desc)], map: "idx_notifications_unread", where: raw("(read_at IS NULL)"))
+  @@index([userId, createdAt(sort: Desc)], map: "idx_notifications_user")
+  @@map("notifications")
+}
+
+model Report {
+  id             String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  reporterId     String       @map("reporter_id") @db.Uuid
+  targetType     String       @map("target_type") @db.VarChar(30)
+  targetId       String       @map("target_id") @db.Uuid
+  reason         ReportReason
+  description    String?
+  status         ReportStatus @default(OPEN)
+  reviewedById   String?      @map("reviewed_by") @db.Uuid
+  resolutionNote String?      @map("resolution_note")
+  reviewedAt     DateTime?    @map("reviewed_at") @db.Timestamptz(6)
+  createdAt      DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime     @default(now()) @map("updated_at") @db.Timestamptz(6)
+  reporter       User         @relation("ReportReporter", fields: [reporterId], references: [id], onUpdate: NoAction)
+  reviewedBy     User?        @relation("ReportReviewer", fields: [reviewedById], references: [id], onUpdate: NoAction)
+
+  @@index([reporterId, createdAt(sort: Desc)], map: "idx_reports_reporter")
+  @@index([status, createdAt(sort: Desc)], map: "idx_reports_status")
+  @@index([targetType, targetId], map: "idx_reports_target")
+  @@map("reports")
+}
+
+model AIData {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId       String?  @map("user_id") @db.Uuid
+  type         AIType
+  targetType   String?  @map("target_type") @db.VarChar(40)
+  targetId     String?  @map("target_id") @db.Uuid
+  input        Json     @default("{}")
+  output       Json     @default("{}")
+  score        Decimal? @db.Decimal(5, 4)
+  model        String?  @db.VarChar(120)
+  modelVersion String?  @map("model_version") @db.VarChar(80)
+  tokensUsed   Int?     @map("tokens_used")
+  latencyMs    Int?     @map("latency_ms")
+  status       String   @default("COMPLETED") @db.VarChar(30)
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  user         User?    @relation(fields: [userId], references: [id], onUpdate: NoAction)
+
+  @@index([type, score(sort: Desc)], map: "idx_ai_score")
+  @@index([targetType, targetId], map: "idx_ai_target")
+  @@index([type, createdAt(sort: Desc)], map: "idx_ai_type")
+  @@index([userId, createdAt(sort: Desc)], map: "idx_ai_user")
+  @@map("ai_data")
+}
+
+model Activity {
+  id         BigInt   @id @default(autoincrement()) @db.BigInt
+  userId     String?  @map("user_id") @db.Uuid
+  event      String   @db.VarChar(100)
+  entityType String?  @map("entity_type") @db.VarChar(50)
+  entityId   String?  @map("entity_id") @db.Uuid
+  metadata   Json     @default("{}")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  user       User?    @relation(fields: [userId], references: [id], onUpdate: NoAction)
+
+  @@index([createdAt(sort: Desc)], map: "idx_activity_created")
+  @@index([entityType, entityId, createdAt(sort: Desc)], map: "idx_activity_entity")
+  @@index([event, createdAt(sort: Desc)], map: "idx_activity_event")
+  @@index([userId, createdAt(sort: Desc)], map: "idx_activity_user")
+  @@map("activity")
+}
+
+
+/// Owner-only native professional document. Server-only RLS/privileges are defined in its unapplied migration.
+model ProfessionalProfile {
+  userId  String @id @map("user_id") @db.Uuid
+  details Json   @db.JsonB
+  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@map("professional_profiles")
+}

@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { authenticationMiddleware } from '../auth/auth.middleware.js';
+import { notificationsController } from './notifications.controller.js';
+export const notificationsRouter = Router();
+notificationsRouter.use(authenticationMiddleware.requireAuth);
+notificationsRouter.get('/', notificationsController.list);
+notificationsRouter.get('/unread-count', notificationsController.count);
+notificationsRouter.patch('/read-all', notificationsController.readAll);
+notificationsRouter.patch('/:id/read', notificationsController.read);
+notificationsRouter.delete('/read', notificationsController.clearRead);
+notificationsRouter.delete('/', notificationsController.clearAll);
+notificationsRouter.delete('/:id', notificationsController.dismiss);

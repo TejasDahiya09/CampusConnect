@@ -1,0 +1,121 @@
+{
+  "benchmark_v2_regression": {
+    "status": "pass",
+    "version": "lost-found-benchmark-v2"
+  },
+  "dataset": {
+    "provenance": "Locally generated geometric PNG fixtures; no student or production data.",
+    "query_count": 12,
+    "seed": 20261022,
+    "slices": {
+      "missing_image_fallback": 2,
+      "visually_discriminative": 10
+    },
+    "version": "lost-found-multimodal-v1"
+  },
+  "environment": {
+    "device": "cpu",
+    "python": "3.14.5"
+  },
+  "error_analysis": {
+    "both_failed_top1": 0,
+    "multimodal_fixed_semantic": 10,
+    "multimodal_hurt_semantic": 0
+  },
+  "image_embedding_bytes_each": 2048,
+  "metrics": {
+    "lf-multimodal-v1": {
+      "mrr": 1.0,
+      "precision_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0
+    },
+    "lf-semantic-v1": {
+      "mrr": 0.4444444444444444,
+      "precision_at_1": 0.16666666666666666,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0
+    }
+  },
+  "model": {
+    "device": "cpu",
+    "embedding_dimension": 512,
+    "identifier": "ViT-B-32",
+    "pretrained_checkpoint": "laion2b_s34b_b79k"
+  },
+  "performance_ms": {
+    "batch_embedding_10_images": 225.00859999945533,
+    "cached_lookup": 0.37880000036238926,
+    "model_load_plus_first_single_embedding": 5699.188100000356,
+    "multimodal_ranking_per_query": 89.84201666665588,
+    "pairwise_cosine": 0.5097000002933783
+  },
+  "provenance": {
+    "completed_at": "2026-10-07T10:18:20.455682Z",
+    "duration_ms": 34621.945,
+    "run_id": "69d802a4-5b9e-4d2a-a353-0f5e775cd33d",
+    "stages_completed": [
+      "dataset_generated",
+      "model_loaded",
+      "performance_measured",
+      "comparison_completed",
+      "benchmark_v2_verified",
+      "artifact_written"
+    ],
+    "started_at": "2026-10-07T10:17:45.833737Z"
+  },
+  "recommendation": "A - MULTIMODAL MATCHING IMPROVES RESULTS",
+  "schema_version": "ai-4-multimodal-result-v1",
+  "slice_metrics": {
+    "lf-multimodal-v1": {
+      "missing_image_fallback": {
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "visually_discriminative": {
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      }
+    },
+    "lf-semantic-v1": {
+      "missing_image_fallback": {
+        "mrr": 1.0,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      },
+      "visually_discriminative": {
+        "mrr": 0.3333333333333333,
+        "precision_at_1": 0.0,
+        "precision_at_3": 0.3333333333333333,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0
+      }
+    }
+  },
+  "status": "complete",
+  "weights": {
+    "fallback": {
+      "category": 0.2,
+      "location": 0.15,
+      "text": 0.55,
+      "time": 0.1
+    },
+    "multimodal": {
+      "category": 0.15,
+      "image": 0.25,
+      "location": 0.1,
+      "text": 0.4,
+      "time": 0.1
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.cc-app-shell .campus-assistant.cc-page {
+  padding-block: 1.25rem 0.75rem;
+}
+.campus-assistant > header {
+  gap: 0.75rem;
+}
+.campus-assistant .cc-page-title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+.campus-assistant .cc-page-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.campus-assistant .cc-chat-workspace {
+  height: var(--assistant-workspace-height, calc(100dvh - 14rem));
+  min-height: 0;
+  max-height: none;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 1rem;
+}
+.campus-assistant .cc-chat-workspace > section {
+  min-height: 0;
+}
+.assistant-history-frame {
+  position: relative;
+  min-height: 0;
+  flex: 1;
+}
+.campus-assistant .cc-chat-scroll {
+  height: 100%;
+  min-height: 0;
+  padding: 1rem;
+}
+.assistant-transcript.is-empty {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+.campus-assistant .cc-chat-scroll .cc-empty {
+  min-height: 0;
+  padding: 1rem 0.5rem;
+}
+.campus-assistant .cc-chat-workspace aside {
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  border-color: var(--cc-border);
+  padding: 0.875rem;
+}
+.campus-assistant .assistant-suggestion-heading {
+  margin: 1rem 0.5rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cc-muted);
+}
+.campus-assistant aside button:not(.cc-button) {
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.campus-assistant .assistant-sidebar-note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+}
+.campus-assistant .assistant-sidebar-note p {
+  color: var(--cc-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.campus-assistant .cc-message-bubble {
+  white-space: normal;
+  overflow: visible;
+  max-width: min(90%, 42rem);
+}
+.campus-assistant .cc-message-bubble p {
+  margin: 0;
+}
+.campus-assistant .cc-message-bubble .assistant-source-label {
+  color: var(--cc-muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.campus-assistant .cc-message-bubble.rounded-bl-md {
+  background: var(--cc-panel);
+  color: var(--cc-text-soft);
+  border: 1px solid var(--cc-border);
+}
+.campus-assistant .cc-message-bubble.rounded-br-md {
+  background: var(--cc-primary);
+  color: var(--cc-primary-contrast);
+}
+.campus-assistant .cc-chat-scroll .cc-icon-box {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+}
+.campus-assistant .assistant-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.875rem;
+}
+.campus-assistant .assistant-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--cc-border);
+  color: var(--cc-primary);
+  background: var(--cc-primary-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.campus-assistant .assistant-actions a:hover {
+  border-color: var(--cc-primary);
+}
+.campus-assistant .assistant-actions a:focus-visible {
+  outline: 2px solid var(--cc-primary);
+  outline-offset: 3px;
+}
+.campus-assistant .assistant-record-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--cc-border);
+  border-radius: 0.65rem;
+  background: var(--cc-panel-muted);
+  overflow-wrap: anywhere;
+}
+.assistant-record-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--cc-text);
+}
+.assistant-record-meta {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--cc-muted);
+}
+.assistant-jump {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  z-index: 1;
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--cc-bg) 30%, transparent);
+}
+.campus-assistant .cc-composer textarea {
+  font-size: 1rem;
+}
+.campus-assistant #assistant-input-help {
+  color: var(--cc-muted);
+}
+.assistant-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.campus-assistant .assistant-new-mobile,
+.campus-assistant .assistant-clear-short {
+  display: none;
+}
+.campus-assistant .cc-chat-scroll:focus-visible {
+  outline: 2px solid var(--cc-primary);
+  outline-offset: -3px;
+}
+@media (min-width: 1024px) {
+  .campus-assistant .cc-chat-workspace {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
+@media (max-width: 1023px) {
+  .cc-app-shell .campus-assistant.cc-page {
+    padding-top: 1rem;
+  }
+  .campus-assistant .cc-page-actions {
+    width: auto;
+  }
+  .campus-assistant .assistant-new-mobile {
+    display: inline-flex;
+  }
+  .campus-assistant .assistant-header-actions .cc-button {
+    flex: 0 1 auto;
+    padding-inline: 0.75rem;
+    font-size: 0.8rem;
+  }
+  .campus-assistant .cc-message-bubble {
+    max-width: calc(100% - 2rem);
+  }
+  .campus-assistant .assistant-clear-short {
+    display: inline;
+  }
+  .campus-assistant .assistant-clear-long {
+    display: none;
+  }
+  .campus-assistant .assistant-compose-area {
+    padding: 0.75rem;
+  }
+}

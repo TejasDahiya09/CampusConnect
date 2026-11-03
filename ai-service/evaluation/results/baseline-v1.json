@@ -1,0 +1,65 @@
+{
+  "candidate_pool": 250,
+  "candidate_pool_methodology": "Each LOST report ranks against all 250 generated FOUND reports.",
+  "confidence_thresholds": {
+    "high": 0.7,
+    "medium": 0.4
+  },
+  "dataset_version": "lf-synthetic-v1",
+  "error_analysis": {
+    "not_ranked_first": 5,
+    "outside_top_3": 0,
+    "representative_examples": [
+      {
+        "category": "Watches",
+        "location": "Sports Area",
+        "query_id": "lost-007",
+        "top_ranked_report_id": "found-161",
+        "true_match_rank": 2
+      },
+      {
+        "category": "Phones",
+        "location": "Auditorium",
+        "query_id": "lost-171",
+        "top_ranked_report_id": "found-017",
+        "true_match_rank": 2
+      },
+      {
+        "category": "Water bottles",
+        "location": "Central Library",
+        "query_id": "lost-176",
+        "top_ranked_report_id": "found-022",
+        "true_match_rank": 2
+      },
+      {
+        "category": "Umbrellas",
+        "location": "Sports Area",
+        "query_id": "lost-194",
+        "top_ranked_report_id": "found-040",
+        "true_match_rank": 2
+      },
+      {
+        "category": "Umbrellas",
+        "location": "Parking Area",
+        "query_id": "lost-236",
+        "top_ranked_report_id": "found-082",
+        "true_match_rank": 2
+      }
+    ]
+  },
+  "evaluation_queries": 250,
+  "matcher_version": "lf-baseline-v1",
+  "mrr": 0.99,
+  "precision_at_1": 0.98,
+  "precision_at_3": 0.3333333333333333,
+  "random_seed": 20261006,
+  "recall_at_3": 1.0,
+  "recall_at_5": 1.0,
+  "report_count": 500,
+  "weights": {
+    "category": 0.2,
+    "location": 0.15,
+    "text": 0.55,
+    "time": 0.1
+  }
+}

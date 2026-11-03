@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.git/
+backend/src/generated/prisma/
+backend/prisma/migrations/
+package-lock.json
+*.tsbuildinfo
+.venv/
+.pytest_cache/
+**/.venv/
+**/.pytest_cache/
+ai-service/evaluation/results/

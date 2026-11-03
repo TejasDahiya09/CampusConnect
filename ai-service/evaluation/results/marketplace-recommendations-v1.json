@@ -1,0 +1,83 @@
+{
+  "availableSignals": [
+    "profile interests",
+    "bookmarks",
+    "listing content",
+    "category",
+    "createdAt",
+    "aggregate viewCount"
+  ],
+  "baselineMetrics": {
+    "hit_rate_at_5": 0.8333333333333334,
+    "mrr": 0.4083333333333334,
+    "precision_at_5": 0.16666666666666666,
+    "recall_at_5": 0.8333333333333334
+  },
+  "coldStartMetrics": {
+    "hit_rate_at_5": 1.0,
+    "mrr": 1.0,
+    "precision_at_5": 0.2,
+    "recall_at_5": 1.0
+  },
+  "completedAt": "2026-10-07T11:08:23.778985+00:00",
+  "dataset": {
+    "candidates": 30,
+    "scenarios": [
+      "single-category",
+      "multi-interest",
+      "bookmark-driven",
+      "profile-only",
+      "new-user",
+      "sparse",
+      "recency",
+      "relevance-vs-recency",
+      "exclusions",
+      "diversity",
+      "conflict"
+    ],
+    "users": 24
+  },
+  "decision": "A - RECOMMENDER BASELINE VALIDATED",
+  "errorAnalysis": {
+    "personalizedMissesAt5": 0
+  },
+  "limitations": [
+    "synthetic ground truth",
+    "no persisted per-user view history",
+    "ranking scores are not probabilities"
+  ],
+  "meanCategoryDiversity": 0.6333333333333333,
+  "performance": {
+    "coldEvaluationMs": 20603.21490000024,
+    "warmRequestMs": 2.6881000003413646
+  },
+  "personalizedMetrics": {
+    "hit_rate_at_5": 1.0,
+    "mrr": 1.0,
+    "precision_at_5": 0.20000000000000004,
+    "recall_at_5": 1.0
+  },
+  "recommenderVersion": "marketplace-hybrid-v1",
+  "runId": "9927814d-613e-43b2-8958-0b05b3a8ad57",
+  "seed": 20261024,
+  "sparseUserMetrics": {
+    "hit_rate_at_5": 1.0,
+    "mrr": 1.0,
+    "precision_at_5": 0.2,
+    "recall_at_5": 1.0
+  },
+  "startedAt": "2026-10-07T11:08:03.173007+00:00",
+  "status": "complete",
+  "unavailableSignals": [
+    "persisted per-user views",
+    "implemented inquiries",
+    "purchases"
+  ],
+  "weights": {
+    "bookmark": 0.15,
+    "category": 0.25,
+    "content": 0.4,
+    "profile": 0.1,
+    "recency": 0.1
+  }
+}

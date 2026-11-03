@@ -1,0 +1,222 @@
+{
+  "benchmark_v2_regression": {
+    "baseline": {
+      "matcher_version": "lf-baseline-v1",
+      "overall": {
+        "mrr": 0.32406666666666667,
+        "precision_at_1": 0.288,
+        "precision_at_3": 0.11733333333333333,
+        "recall_at_3": 0.352,
+        "recall_at_5": 0.39
+      }
+    },
+    "benchmark_version": "lost-found-benchmark-v2",
+    "semantic": {
+      "matcher_version": "lf-semantic-v1",
+      "overall": {
+        "mrr": 0.46436666666666665,
+        "precision_at_1": 0.362,
+        "precision_at_3": 0.176,
+        "recall_at_3": 0.528,
+        "recall_at_5": 0.67
+      }
+    },
+    "status": "pass"
+  },
+  "candidate_pool_results": [
+    {
+      "candidate_pool": 50,
+      "candidate_retrieval_recall": 1.0,
+      "excluded_before_semantic_ranking_count": 0,
+      "included_but_not_top_five_count": 1,
+      "metadata_ordering_median_ms": 49.836,
+      "semantic_end_to_end_recall_at_1": 0.9375,
+      "semantic_end_to_end_recall_at_3": 0.9921875,
+      "semantic_end_to_end_recall_at_5": 0.9921875,
+      "semantic_ranking_median_ms_when_included": 0.129,
+      "semantic_recall_at_5_when_included": 0.9921875
+    },
+    {
+      "candidate_pool": 100,
+      "candidate_retrieval_recall": 1.0,
+      "excluded_before_semantic_ranking_count": 0,
+      "included_but_not_top_five_count": 2,
+      "metadata_ordering_median_ms": 49.836,
+      "semantic_end_to_end_recall_at_1": 0.8671875,
+      "semantic_end_to_end_recall_at_3": 0.984375,
+      "semantic_end_to_end_recall_at_5": 0.984375,
+      "semantic_ranking_median_ms_when_included": 0.073,
+      "semantic_recall_at_5_when_included": 0.984375
+    },
+    {
+      "candidate_pool": 250,
+      "candidate_retrieval_recall": 1.0,
+      "excluded_before_semantic_ranking_count": 0,
+      "included_but_not_top_five_count": 2,
+      "metadata_ordering_median_ms": 49.836,
+      "semantic_end_to_end_recall_at_1": 0.8359375,
+      "semantic_end_to_end_recall_at_3": 0.9609375,
+      "semantic_end_to_end_recall_at_5": 0.984375,
+      "semantic_ranking_median_ms_when_included": 0.136,
+      "semantic_recall_at_5_when_included": 0.984375
+    },
+    {
+      "candidate_pool": 500,
+      "candidate_retrieval_recall": 1.0,
+      "excluded_before_semantic_ranking_count": 0,
+      "included_but_not_top_five_count": 3,
+      "metadata_ordering_median_ms": 49.836,
+      "semantic_end_to_end_recall_at_1": 0.78125,
+      "semantic_end_to_end_recall_at_3": 0.9296875,
+      "semantic_end_to_end_recall_at_5": 0.9765625,
+      "semantic_ranking_median_ms_when_included": 0.235,
+      "semantic_recall_at_5_when_included": 0.9765625
+    }
+  ],
+  "configuration": {
+    "batch_size": 64,
+    "candidate_pool_levels": [
+      50,
+      100,
+      250,
+      500
+    ],
+    "candidate_pool_query_count": 128,
+    "scale_levels": [
+      100,
+      500,
+      1000,
+      5000,
+      10000
+    ],
+    "scale_query_count": 64
+  },
+  "controlled_pair_count": 5000,
+  "corpus_embedding": {
+    "duration_ms": 31081.17,
+    "timing_kind": "measured"
+  },
+  "corpus_seed": 20261021,
+  "corpus_size": 10000,
+  "corpus_version": "lost-found-scaling-v1",
+  "embedding_dimension": 384,
+  "encoder_efficiency": {
+    "model_encode_calls": 2,
+    "texts_encoded": 10336,
+    "unique_scaling_texts": 10000
+  },
+  "environment": {
+    "device": "cpu",
+    "python_version": "3.14.5",
+    "vector_representation": "numpy float32 dense matrix"
+  },
+  "full_vector_matrix_bytes": 15360000,
+  "full_vector_matrix_mib": 14.648,
+  "mode": "full",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "privacy_boundary": {
+    "database_access": false,
+    "external_inference_api": false,
+    "frontend_vector_exposure": false,
+    "persistent_vector_store": false,
+    "synthetic_data_only": true
+  },
+  "provenance": {
+    "completed_at": "2026-10-07T09:47:43.328153Z",
+    "duration_ms": 88856.881,
+    "evaluator_version": "ai-3-scaling-evaluator-v2",
+    "run_id": "fb27210a-16b6-4873-a963-09d7a182f2a5",
+    "stages_completed": [
+      "corpus_generated",
+      "model_loaded",
+      "corpus_encoded",
+      "scale_retrieval_completed",
+      "candidate_pool_completed",
+      "benchmark_v2_verified",
+      "result_finalized",
+      "artifact_written"
+    ],
+    "started_at": "2026-10-07T09:46:14.471313Z"
+  },
+  "recommendation": {
+    "decision": "A - KEEP CURRENT BRUTE-FORCE APPROACH",
+    "rationale": "Brute-force cosine search remained below the decision threshold and the 100-candidate proxy retained at least 95% of known matches in the synthetic corpus."
+  },
+  "scale_results": [
+    {
+      "candidate_count": 100,
+      "controlled_pool_recall_at_1": 0.140625,
+      "controlled_pool_recall_at_3": 0.421875,
+      "controlled_pool_recall_at_5": 0.796875,
+      "cosine_search_median_ms_per_query": 0.021,
+      "embedding_estimation_basis": "linear proportion of the single measured full-corpus batch duration",
+      "embedding_time_ms": 310.812,
+      "embedding_timing_kind": "derived_estimate",
+      "vector_matrix_bytes": 153600,
+      "vector_matrix_mib": 0.146,
+      "warm_precomputed_total_median_ms_per_query": 0.04
+    },
+    {
+      "candidate_count": 500,
+      "controlled_pool_recall_at_1": 0.03125,
+      "controlled_pool_recall_at_3": 0.078125,
+      "controlled_pool_recall_at_5": 0.1875,
+      "cosine_search_median_ms_per_query": 0.056,
+      "embedding_estimation_basis": "linear proportion of the single measured full-corpus batch duration",
+      "embedding_time_ms": 1554.058,
+      "embedding_timing_kind": "derived_estimate",
+      "vector_matrix_bytes": 768000,
+      "vector_matrix_mib": 0.732,
+      "warm_precomputed_total_median_ms_per_query": 0.168
+    },
+    {
+      "candidate_count": 1000,
+      "controlled_pool_recall_at_1": 0.0,
+      "controlled_pool_recall_at_3": 0.03125,
+      "controlled_pool_recall_at_5": 0.0625,
+      "cosine_search_median_ms_per_query": 0.122,
+      "embedding_estimation_basis": "linear proportion of the single measured full-corpus batch duration",
+      "embedding_time_ms": 3108.117,
+      "embedding_timing_kind": "derived_estimate",
+      "vector_matrix_bytes": 1536000,
+      "vector_matrix_mib": 1.465,
+      "warm_precomputed_total_median_ms_per_query": 0.697
+    },
+    {
+      "candidate_count": 5000,
+      "controlled_pool_recall_at_1": 0.0,
+      "controlled_pool_recall_at_3": 0.0,
+      "controlled_pool_recall_at_5": 0.0,
+      "cosine_search_median_ms_per_query": 0.687,
+      "embedding_estimation_basis": "linear proportion of the single measured full-corpus batch duration",
+      "embedding_time_ms": 15540.585,
+      "embedding_timing_kind": "derived_estimate",
+      "vector_matrix_bytes": 7680000,
+      "vector_matrix_mib": 7.324,
+      "warm_precomputed_total_median_ms_per_query": 3.892
+    },
+    {
+      "candidate_count": 10000,
+      "controlled_pool_recall_at_1": 0.0,
+      "controlled_pool_recall_at_3": 0.0,
+      "controlled_pool_recall_at_5": 0.0,
+      "cosine_search_median_ms_per_query": 1.322,
+      "embedding_estimation_basis": null,
+      "embedding_time_ms": 31081.17,
+      "embedding_timing_kind": "measured",
+      "vector_matrix_bytes": 15360000,
+      "vector_matrix_mib": 14.648,
+      "warm_precomputed_total_median_ms_per_query": 8.176
+    }
+  ],
+  "schema_version": "ai-3-scaling-result-v2",
+  "status": "complete",
+  "timing_methodology": {
+    "clock": "time.perf_counter_ns",
+    "corpus_embedding": "single measured batch operation",
+    "cosine_repetitions_per_query": 3,
+    "scope": "local CPU measurement; not a production load test",
+    "smaller_embedding_times": "derived linear estimates from measured full corpus",
+    "warm_repetitions_per_query": 3
+  }
+}

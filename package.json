@@ -1,0 +1,48 @@
+{
+  "name": "campus-connect",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names frontend,backend --prefix-colors cyan,magenta \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "dev:all": "concurrently --kill-others-on-fail --names frontend,backend,ai --prefix-colors cyan,magenta,yellow \"npm:dev:frontend\" \"npm:dev:backend\" \"ai-service\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --app-dir ai-service --reload --host 0.0.0.0 --port 8001\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint:frontend": "npm run lint --workspace frontend",
+    "lint:backend": "npm run lint --workspace backend",
+    "prisma:validate": "npm run prisma:validate --workspace backend",
+    "prisma:generate": "npm run prisma:generate --workspace backend",
+    "db:seed": "npm run db:seed --workspace backend",
+    "seed:demo": "npm run seed:demo --workspace backend --",
+    "seed:demo-lost-found-matches": "npm run seed:demo-lost-found-matches --workspace backend --",
+    "seed:demo-media": "npm run seed:demo-media --workspace backend --",
+    "db:migrate:dev": "npm run db:migrate:dev --workspace backend",
+    "db:migrate:deploy": "npm run db:migrate:deploy --workspace backend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run typecheck && npm test && npm run format:check"
+  },
+  "engines": {
+    "node": ">=20.19.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.68.0"
+  }
+}

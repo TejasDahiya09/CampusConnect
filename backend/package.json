@@ -1,0 +1,49 @@
+{
+  "name": "@campus-connect/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "photo:check-local": "tsx scripts/profile-photo-local-check.mjs",
+    "build": "npm run prisma:generate && tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "tsx --test tests/**/*.test.ts",
+    "typecheck": "npm run prisma:generate && tsc -p tsconfig.json --noEmit --pretty false && tsc -p tests/tsconfig.json --noEmit --pretty false",
+    "lint": "eslint . --max-warnings 0",
+    "prisma:format": "prisma format",
+    "prisma:generate": "prisma generate",
+    "prisma:validate": "prisma validate",
+    "db:seed": "prisma db seed",
+    "seed:demo": "tsx src/database/demo-seed/demo-seed.cli.ts",
+    "seed:demo-lost-found-matches": "tsx src/database/demo-lost-found-matches/demo-lost-found-matches.cli.ts",
+    "seed:demo-media": "tsx src/database/demo-media/demo-media.cli.ts",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1124.0",
+    "@aws-sdk/s3-request-presigner": "^3.1124.0",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jose": "^6.2.10",
+    "multer": "^2.5.0",
+    "pg": "^8.16.3",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.16.0",
+    "prisma": "^7.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.0"
+  }
+}
